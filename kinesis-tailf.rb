@@ -1,4 +1,4 @@
-class Kinesis-Tailf < Formula
+class KinesisTailf < Formula
   version '0.1.1'
   homepage 'https://github.com/fujiwara/kinesis-tailf'
   url "https://github.com/fujiwara/kinesis-tailf/releases/download/v0.1.1/kinesis-tailf-v0.1.1-darwin-amd64"
