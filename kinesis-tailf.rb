@@ -6,6 +6,7 @@ class KinesisTailf < Formula
   head 'https://github.com/fujiwara/kinesis-tailf.git'
 
   def install
+    system 'mv', 'kinesis-tailf-v0.1.1-darwin-amd64', 'kinesis-tailf'
     bin.install 'kinesis-tailf'
   end
 end
