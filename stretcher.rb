@@ -1,8 +1,8 @@
 class Stretcher < Formula
   version '0.10.0'
   homepage 'https://github.com/fujiwara/stretcher'
-  url "https://github.com/fujiwara/stretcher/releases/download/v0.10.0/stretcher-v0.10.0-darwin-amd64"
-  sha256 '7e8796480b45007a39875292d9e55679a1869ade1b0417778d74fd84f27d2eef'
+  url "https://github.com/fujiwara/stretcher/releases/download/v0.10.0/stretcher-v0.10.0-darwin-amd64.zip"
+  sha256 'c6eaecc1fee42cf708130d121cbb5d0103401c6d1fc498902bc14ccf2509a13a'
   head 'https://github.com/fujiwara/stretcher.git'
 
   def install
