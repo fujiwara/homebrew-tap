@@ -1,8 +1,8 @@
 class Lambroll < Formula
-  version '0.3.2'
+  version '0.3.3'
   homepage 'https://github.com/fujiwara/lambroll'
-  url "https://github.com/fujiwara/lambroll/releases/download/v0.3.2/lambroll_v0.3.2_darwin_amd64.zip"
-  sha256 '63c3cc9acdf54aaeb5939a4c0bd01240b7f9fa27c23a5920d4592018de8cf4e4'
+  url "https://github.com/fujiwara/lambroll/releases/download/v0.3.3/lambroll_v0.3.3_darwin_amd64.zip"
+  sha256 '3f5014a962c75a04eb7a52f346407446d038001f39a9ba024aaa181744901bfd'
   head 'https://github.com/fujiwara/lambroll.git'
 
   head do
