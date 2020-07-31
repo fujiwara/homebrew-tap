@@ -1,8 +1,8 @@
 class FluentAgentHydra < Formula
-  version '0.1.6'
+  version '0.3.1'
   homepage 'https://github.com/fujiwara/fluent-agent-hydra'
-  url "https://github.com/fujiwara/fluent-agent-hydra/releases/download/v0.1.6/fluent-agent-hydra-v0.1.6-darwin-amd64.zip"
-  sha256 'baa801eaf5288809ca2c321790284293edd087ac6c36164c2d1757a380d73825'
+  url "https://github.com/fujiwara/fluent-agent-hydra/releases/download/v0.3.1/fluent-agent-hydra-v0.3.1-darwin-amd64.zip"
+  sha256 '6d5bb2fb8e246ff6ea87b52e5777368713a1b83951fd2d78efeb8c130634b91b'
   head 'https://github.com/fujiwara/fluent-agent-hydra.git'
 
   def install
