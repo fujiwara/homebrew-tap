@@ -30,8 +30,5 @@ jobs:
           git config --global user.email fujiwara.shunichiro@gmail.com
           git config --global user.name fujiwara
           git commit -m 'update to newer version'
-          gh pr create \
-            --title "$BRANCH" \
-            --body "Update to newer versions." \
-            --reviewer fujiwara \
-            --repo fujiwara/homebrew-tap
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v3
