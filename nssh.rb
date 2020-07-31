@@ -6,7 +6,7 @@ class Nssh < Formula
   head 'https://github.com/fujiwara/nssh.git'
 
   def install
-    system 'mv', 'nssh-v0.1.0-darwin-amd64', 'nssh'
+    system 'mv nssh-v*-darwin-amd64 nssh'
     bin.install 'nssh'
   end
 end

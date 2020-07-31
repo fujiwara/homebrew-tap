@@ -6,7 +6,7 @@ class FluentAgentHydra < Formula
   head 'https://github.com/fujiwara/fluent-agent-hydra.git'
 
   def install
-    system 'mv', 'fluent-agent-hydra-v0.1.6-darwin-amd64', 'fluent-agent-hydra'
+    system 'mv fluent-agent-hydra-v*-darwin-amd64 fluent-agent-hydra'
     bin.install 'fluent-agent-hydra'
   end
 end
