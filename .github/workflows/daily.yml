@@ -1,0 +1,33 @@
+name: daily update
+on:
+  schedule:
+    - cron: "29 9,18 * * *"
+
+jobs:
+  test:
+    name: update
+    runs-on: macos-latest
+
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v2
+
+      - name: Install maltmill
+        run: |
+          brew install Songmu/tap/maltmill
+
+      - name: update & pr
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          BRANCH=update/$(date +%Y%m%dT%H%M)
+          git checkout -b $BRANCH
+          make update-all
+          git diff --exit-code --quiet && exit
+          git diff --name-only | xargs -n 1 brew install --build-from-source
+          git add *.rb
+          git commit -m 'update to newer version'
+          gh pr create \
+            --title "$BRANCH" \
+            --body "Update to newer versions." \
+            --reviewer fujiwara
