@@ -22,10 +22,16 @@ jobs:
         run: |
           make update-all
           git diff --exit-code --quiet && exit
-          git diff --name-only | xargs -n 1 brew install --build-from-source
+          CHANGED_FILES=$(git diff --name-only)
+          echo $CHANGED_FILES | xargs -n 1 brew install --build-from-source
           git add *.rb
           git config --global user.email fujiwara.shunichiro@gmail.com
           git config --global user.name fujiwara
           git commit -m 'update to newer version'
+          echo "::set-env name=CHANGED_FILES::$CHANGED_FILES"
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3
+        with:
+          title: update to newer version
+          body: ${{ env.CHANGED_FILES }}
+          reviewers: fujiwara
