@@ -33,4 +33,5 @@ jobs:
           gh pr create \
             --title "$BRANCH" \
             --body "Update to newer versions." \
-            --reviewer fujiwara
+            --reviewer fujiwara \
+            --repo fujiwara/homebrew-tap
