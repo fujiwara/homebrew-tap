@@ -20,8 +20,6 @@ jobs:
       - name: update & pr
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GIT_AUTHOR_EMAIL: fujiwara.shunichiro+octocat@gmail.com
-          GIT_AUTHOR_NAME: fujiwara
         run: |
           BRANCH=update/$(date +%Y%m%dT%H%M)
           git checkout -b $BRANCH
@@ -29,6 +27,8 @@ jobs:
           git diff --exit-code --quiet && exit
           git diff --name-only | xargs -n 1 brew install --build-from-source
           git add *.rb
+          git config --global user.email fujiwara.shunichiro@gmail.com
+          git config --global user.name fujiwara
           git commit -m 'update to newer version'
           gh pr create \
             --title "$BRANCH" \
