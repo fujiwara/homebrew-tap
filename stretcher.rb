@@ -6,7 +6,7 @@ class Stretcher < Formula
   head 'https://github.com/fujiwara/stretcher.git'
 
   def install
-    system 'mv', 'stretcher-v0.10.0-darwin-amd64', 'stretcher'
+    system 'mv stretcher-v*-darwin-amd64 stretcher'
     bin.install 'stretcher'
   end
 end
