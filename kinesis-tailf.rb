@@ -14,5 +14,6 @@ class KinesisTailf < Formula
       system 'make', 'build'
     end
     bin.install 'kinesis-tailf'
+    bin.install 'kinesis-cat'
   end
 end
