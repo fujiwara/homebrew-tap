@@ -1,8 +1,8 @@
 class KinesisTailf < Formula
-  version '0.3.0'
+  version '0.3.1'
   homepage 'https://github.com/fujiwara/kinesis-tailf'
-  url "https://github.com/fujiwara/kinesis-tailf/releases/download/v0.3.0/kinesis-tailf_0.3.0_darwin_amd64.tar.gz"
-  sha256 'b67afe1e1084e8e0d7f9768b1b23acaa0354983668c6cced84eadf326cd4185f'
+  url "https://github.com/fujiwara/kinesis-tailf/releases/download/v0.3.1/kinesis-tailf_0.3.1_darwin_amd64.tar.gz"
+  sha256 'f0016e455d6e2f74517530db4d634457dc31293400a410f725e481daa896eabb'
   head 'https://github.com/fujiwara/kinesis-tailf.git'
 
   head do
