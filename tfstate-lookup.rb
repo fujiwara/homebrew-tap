@@ -1,8 +1,8 @@
 class TfstateLookup < Formula
-  version '0.0.10'
+  version '0.0.11'
   homepage 'https://github.com/fujiwara/tfstate-lookup'
-  url "https://github.com/fujiwara/tfstate-lookup/releases/download/v0.0.10/tfstate-lookup_0.0.10_darwin_amd64.tar.gz"
-  sha256 'cf6edd26ed3a8b245a9ec8e30beb632983c0b06f8d18667b16b04e833236d4db'
+  url "https://github.com/fujiwara/tfstate-lookup/releases/download/v0.0.11/tfstate-lookup_0.0.11_darwin_amd64.tar.gz"
+  sha256 '5d604d648541cde95bdadc35a301f17cec62f04931050e0b096d8084ebed0176'
   head 'https://github.com/fujiwara/tfstate-lookup.git'
 
   head do
