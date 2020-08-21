@@ -1,8 +1,5 @@
-name: test
-on:
-  push:
-    branches:
-      - master
+name: diff-test
+on: push
 
 jobs:
   test:
@@ -11,7 +8,6 @@ jobs:
       matrix:
         os: [ubuntu-latest, macos-latest]
     runs-on: ${{ matrix.os }}
-
     steps:
       - name: Check out code
         uses: actions/checkout@v2
@@ -20,4 +16,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          ls *.rb | xargs -n 1 brew install --build-from-source
+          git fetch origin master
+          git diff origin/master --name-only | fgrep .rb \
+          | xargs -n 1 brew install --build-from-source
