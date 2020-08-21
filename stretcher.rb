@@ -16,7 +16,7 @@ class Stretcher < Formula
   end
 
   def install
-    system 'mv stretcher-v*-darwin-amd64 stretcher'
+    system 'mv stretcher-v*-*-amd64 stretcher'
     bin.install 'stretcher'
   end
 end

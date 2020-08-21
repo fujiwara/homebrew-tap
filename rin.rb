@@ -16,7 +16,7 @@ class Rin < Formula
   end
 
   def install
-    system 'mv rin-v*-darwin-amd64 rin'
+    system 'mv rin-v*-*-amd64 rin'
     bin.install 'rin'
   end
 end

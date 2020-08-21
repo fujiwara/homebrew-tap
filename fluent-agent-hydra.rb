@@ -16,7 +16,7 @@ class FluentAgentHydra < Formula
   end
 
   def install
-    system 'mv fluent-agent-hydra-v*-darwin-amd64 fluent-agent-hydra'
+    system 'mv fluent-agent-hydra-v*-*-amd64 fluent-agent-hydra'
     bin.install 'fluent-agent-hydra'
   end
 end

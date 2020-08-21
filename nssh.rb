@@ -16,7 +16,7 @@ class Nssh < Formula
   end
 
   def install
-    system 'mv nssh-v*-darwin-amd64 nssh'
+    system 'mv nssh-v*-*-amd64 nssh'
     bin.install 'nssh'
   end
 end
