@@ -1,13 +1,13 @@
 class Stretcher < Formula
-  version '1.0.0'
+  version '1.0.1'
   homepage 'https://github.com/fujiwara/stretcher'
   if OS.mac?
-    url "https://github.com/fujiwara/stretcher/releases/download/v1.0.0/stretcher-v1.0.0-darwin-amd64.zip"
-    sha256 'c7876762e88aa94d1ff04b199e31ca6ad1df43a3a29183294d2651db890d89c1'
+    url "https://github.com/fujiwara/stretcher/releases/download/v1.0.1/stretcher-v1.0.1-darwin-amd64.zip"
+    sha256 '62f18323e9f80a8d526f64dfb9e2253355567a540d844edcd84fae4b56a846eb'
   end
   if OS.linux?
-    url "https://github.com/fujiwara/stretcher/releases/download/v1.0.0/stretcher-v1.0.0-linux-amd64.zip"
-    sha256 '0dd4b8bbc97c003a6b481b0dd7cfbe2a8a48ff582b1483e69d21d9bc9a87f469'
+    url "https://github.com/fujiwara/stretcher/releases/download/v1.0.1/stretcher-v1.0.1-linux-amd64.zip"
+    sha256 'b41ddee810a7db0b0f3832eab76000a5157e1f6fe6afc6f9b699523618939f35'
   end
   head 'https://github.com/fujiwara/stretcher.git'
 
