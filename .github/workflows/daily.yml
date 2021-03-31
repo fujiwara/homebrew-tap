@@ -22,7 +22,7 @@ jobs:
         run: |
           make update-all
           git diff --exit-code --quiet && exit
-          git diff --name-only | xargs -n 1 brew install --build-from-source
+          git diff --name-only | xargs -n 1 brew install --formula --build-from-source
           git add *.rb
           git config --global user.email fujiwara.shunichiro@gmail.com
           git config --global user.name fujiwara

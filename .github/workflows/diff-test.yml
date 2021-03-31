@@ -21,4 +21,4 @@ jobs:
         run: |
           git fetch origin master
           git diff origin/master --name-only | fgrep .rb \
-          | xargs -n 1 brew install --build-from-source
+          | xargs -n 1 brew install --formula --build-from-source
