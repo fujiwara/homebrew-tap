@@ -1,13 +1,13 @@
 class Lambroll < Formula
-  version '0.10.0'
+  version '0.11.0'
   homepage 'https://github.com/fujiwara/lambroll'
   if OS.mac?
-    url "https://github.com/fujiwara/lambroll/releases/download/v0.10.0/lambroll_v0.10.0_darwin_amd64.zip"
-    sha256 '0e6360d3b340c3e925c7efc981622cd7b4bfc4582359e2b1a71488b3642d99a9'
+    url "https://github.com/fujiwara/lambroll/releases/download/v0.11.0/lambroll_v0.11.0_darwin_amd64.zip"
+    sha256 '34928392544e2d44edf4383c7ab9341ff4c67a13f6865d9c904997c196f86d9d'
   end
   if OS.linux?
-    url "https://github.com/fujiwara/lambroll/releases/download/v0.10.0/lambroll_v0.10.0_linux_amd64.tar.gz"
-    sha256 'c3d70af6e056b8e6bab0a92afe73f6fee038dd88db722dd12348e9f5225d0f6a'
+    url "https://github.com/fujiwara/lambroll/releases/download/v0.11.0/lambroll_v0.11.0_linux_amd64.tar.gz"
+    sha256 'f2855c7f6dbde774035a4d95011389e6e6668f5b4ade0b1024041b2c4e30193e'
   end
   head 'https://github.com/fujiwara/lambroll.git'
 
