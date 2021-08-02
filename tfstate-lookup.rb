@@ -1,13 +1,13 @@
 class TfstateLookup < Formula
-  version '0.2.4'
+  version '0.3.0'
   homepage 'https://github.com/fujiwara/tfstate-lookup'
   if OS.mac?
-    url "https://github.com/fujiwara/tfstate-lookup/releases/download/v0.2.4/tfstate-lookup_0.2.4_darwin_amd64.tar.gz"
-    sha256 'dcf67b327bc086fd4b6f295dc5119b2d6324ae2eb320db652268f6d471bffd97'
+    url "https://github.com/fujiwara/tfstate-lookup/releases/download/v0.3.0/tfstate-lookup_0.3.0_darwin_amd64.tar.gz"
+    sha256 '4a1b9a8f5e10bbf5e6170e528e4e92389d4570144433c99c2be0b63a32d792f5'
   end
   if OS.linux?
-    url "https://github.com/fujiwara/tfstate-lookup/releases/download/v0.2.4/tfstate-lookup_0.2.4_linux_amd64.tar.gz"
-    sha256 '57a088719c69f062d4e77b90f64847eff3941a0ed04b32cf3e054fcaf27c87bc'
+    url "https://github.com/fujiwara/tfstate-lookup/releases/download/v0.3.0/tfstate-lookup_0.3.0_linux_amd64.tar.gz"
+    sha256 'c81c2b6fc9d973382a8df52f1b9118552375810e644c4bd45f03933d847c1ebe'
   end
   head 'https://github.com/fujiwara/tfstate-lookup.git'
 
