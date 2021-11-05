@@ -17,7 +17,8 @@ class Lambroll < Formula
 
   def install
     if build.head?
-      system 'make', 'build'
+      system 'make'
+      system 'mv', 'cmd/lambroll/lambroll', '.'
     end
     bin.install 'lambroll'
   end
