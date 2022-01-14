@@ -1,13 +1,13 @@
 class Rin < Formula
-  version '1.1.3'
+  version '1.1.4'
   homepage 'https://github.com/fujiwara/rin'
   if OS.mac?
-    url "https://github.com/fujiwara/Rin/releases/download/v1.1.3/Rin_1.1.3_darwin_amd64.tar.gz"
-    sha256 '7efa179496cfd69e87434c758d64a074a846c72d03af37b1e4c3b5121ed85eae'
+    url "https://github.com/fujiwara/Rin/releases/download/v1.1.4/Rin_1.1.4_darwin_amd64.tar.gz"
+    sha256 '8d45972aed6e8e83c76ea394ff3d49992fed8bdf4beac5730cbda8fd476018a5'
   end
   if OS.linux?
-    url "https://github.com/fujiwara/Rin/releases/download/v1.1.3/Rin_1.1.3_linux_amd64.tar.gz"
-    sha256 '7e9f1287d8571b034d4492a5dc1db607932bf49e7938cccc96cad88c8d040e46'
+    url "https://github.com/fujiwara/Rin/releases/download/v1.1.4/Rin_1.1.4_linux_amd64.tar.gz"
+    sha256 '1173448b185864a6c42f6a74611b9805a6c37be6b2c6e590924ed0f4ed6ad811'
   end
   head 'https://github.com/fujiwara/rin.git'
 
