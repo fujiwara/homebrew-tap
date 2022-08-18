@@ -1,13 +1,13 @@
 class Ecsta < Formula
-  version '0.0.2'
+  version '0.0.4'
   homepage 'https://github.com/fujiwara/ecsta'
   if OS.mac?
-    url "https://github.com/fujiwara/ecsta/releases/download/v0.0.2/ecsta_0.0.2_darwin_amd64.tar.gz"
-    sha256 '3e0e76a89b5fa7d4f8a00a9c1430e51487e9520a3d3f4ae6f5c6afcfc0b915cb'
+    url "https://github.com/fujiwara/ecsta/releases/download/v0.0.4/ecsta_0.0.4_darwin_amd64.tar.gz"
+    sha256 '4a99f3a665c584fea976ad859a62c2abc40f6d6d271e26bf7238c0667b76095f'
   end
   if OS.linux?
-    url "https://github.com/fujiwara/ecsta/releases/download/v0.0.2/ecsta_0.0.2_linux_amd64.tar.gz"
-    sha256 '8e25c00e25558ce1a53c53963e768414b5654d2ec2cf1fd81fc4dd6bc9e9c3f8'
+    url "https://github.com/fujiwara/ecsta/releases/download/v0.0.4/ecsta_0.0.4_linux_amd64.tar.gz"
+    sha256 '8d12a8f4d12a48f82f5a52116817bd5ab6255f1211f2b075cc6fb3834dd704ab'
   end
   head 'https://github.com/fujiwara/ecsta.git'
 
