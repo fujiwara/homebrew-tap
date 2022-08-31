@@ -1,13 +1,13 @@
 class Ecrm < Formula
-  version '0.2.0'
+  version '0.3.1'
   homepage 'https://github.com/fujiwara/ecrm'
   if OS.mac?
-    url "https://github.com/fujiwara/ecrm/releases/download/v0.2.0/ecrm_0.2.0_darwin_amd64.tar.gz"
-    sha256 'ad3fb3369532de359ca39c25e753088c9f6c0a4d62ad5a2507b1a68c1fd9913d'
+    url "https://github.com/fujiwara/ecrm/releases/download/v0.3.1/ecrm_0.3.1_darwin_amd64.tar.gz"
+    sha256 'b4e14372668eff87d22bc704bc30e50a048ac1d64e423bb1ffea81bd4a68e927'
   end
   if OS.linux?
-    url "https://github.com/fujiwara/ecrm/releases/download/v0.2.0/ecrm_0.2.0_linux_amd64.tar.gz"
-    sha256 '54e71bde68ffe8513e872afee2dd3a4b60f9a32e3e4a727b43605e62ce8a67b9'
+    url "https://github.com/fujiwara/ecrm/releases/download/v0.3.1/ecrm_0.3.1_linux_amd64.tar.gz"
+    sha256 'c4f49289b999c84857bb89e8a1a863c7519973f604ad37667971f9b261bcfcef'
   end
   head 'https://github.com/fujiwara/ecrm.git'
 
