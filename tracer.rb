@@ -1,13 +1,13 @@
 class Tracer < Formula
-  version '0.1.3'
+  version '1.0.0'
   homepage 'https://github.com/fujiwara/tracer'
   if OS.mac?
-    url "https://github.com/fujiwara/tracer/releases/download/v0.1.3/tracer_0.1.3_darwin_amd64.tar.gz"
-    sha256 '061fc780ef65fd93c8ce3794d36d2a84851c460a8cddc45c1e3c7e4efebccb67'
+    url "https://github.com/fujiwara/tracer/releases/download/v1.0.0/tracer_1.0.0_darwin_amd64.tar.gz"
+    sha256 'd86581fe8714de882a4869113191dd7ae1602aea331579f61fc1ec6192c6c0fd'
   end
   if OS.linux?
-    url "https://github.com/fujiwara/tracer/releases/download/v0.1.3/tracer_0.1.3_linux_amd64.tar.gz"
-    sha256 'd0e7f34240076799c784759da7e123712540653f5e120b68b645b6dcf4fc2362'
+    url "https://github.com/fujiwara/tracer/releases/download/v1.0.0/tracer_1.0.0_linux_amd64.tar.gz"
+    sha256 'c84aad622ffae635419282cd5258a6eba572be83482025b9829345eb42da8c77'
   end
   head 'https://github.com/fujiwara/tracer.git'
 
