@@ -1,13 +1,13 @@
 class Sardine < Formula
-  version '0.3.1'
+  version '0.4.0'
   homepage 'https://github.com/fujiwara/sardine'
   if OS.mac?
-    url "https://github.com/fujiwara/sardine/releases/download/v0.3.1/sardine_v0.3.1_darwin_amd64.zip"
-    sha256 'c6028174516966a79be8bfaab10e5b113ec715d72266cd4cf2f4fbd8f9e6b599'
+    url "https://github.com/fujiwara/sardine/releases/download/v0.4.0/sardine_0.4.0_darwin_amd64.tar.gz"
+    sha256 '16fec4dcd68d05eb101c428bea17069ccebae3228c97d9c1590a0992633fd93c'
   end
   if OS.linux?
-    url "https://github.com/fujiwara/sardine/releases/download/v0.3.1/sardine_v0.3.1_linux_amd64.zip"
-    sha256 '42dd3cc7c30aceecfd718154b417fe2636fd1b12edf92a67f70914020e584de1'
+    url "https://github.com/fujiwara/sardine/releases/download/v0.4.0/sardine_0.4.0_linux_amd64.tar.gz"
+    sha256 '758a42fdaedd0661868816e22928c26fc78bc76098b116de428053147dcf2699'
   end
   head 'https://github.com/fujiwara/sardine.git'
 
