@@ -13,7 +13,9 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
       - name: Check out code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
+
+      - run: echo "/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin" >> $GITHUB_PATH
 
       - name: test
         env:
