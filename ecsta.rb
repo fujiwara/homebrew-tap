@@ -1,27 +1,27 @@
 class Ecsta < Formula
   desc 'ECS Task Assistant tool.'
-  version '0.2.2'
+  version '0.2.3'
   homepage 'https://github.com/fujiwara/ecsta'
 
   on_macos do
     if Hardware::CPU.arm?
-      url 'https://github.com/fujiwara/ecsta/releases/download/v0.2.2/ecsta_0.2.2_darwin_arm64.tar.gz'
-      sha256 'bcc08db6e8c430b0da5ac02c5640698c9d217fee01a8a83bbeb44405a02161b8'
+      url 'https://github.com/fujiwara/ecsta/releases/download/v0.2.3/ecsta_0.2.3_darwin_arm64.tar.gz'
+      sha256 '66fcbd602a9212b48293206645aa9ec50352222e4333b443b2715ba13145541e'
     end
     if Hardware::CPU.intel?
-      url 'https://github.com/fujiwara/ecsta/releases/download/v0.2.2/ecsta_0.2.2_darwin_amd64.tar.gz'
-      sha256 'c4c07dd5f04868a16e5477e4629058f36945ff35ffd929f31fbb555d09e6586c'
+      url 'https://github.com/fujiwara/ecsta/releases/download/v0.2.3/ecsta_0.2.3_darwin_amd64.tar.gz'
+      sha256 'f40c6777fc4eab26135b9b87beaabd42279f382431023ed9bf3c79bcc48f645d'
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url 'https://github.com/fujiwara/ecsta/releases/download/v0.2.2/ecsta_0.2.2_linux_arm64.tar.gz'
-      sha256 'a5db39c79c47c97bcd8ee721a3c6320803bb403d9d8b52434a15decb0376b2e8'
+      url 'https://github.com/fujiwara/ecsta/releases/download/v0.2.3/ecsta_0.2.3_linux_arm64.tar.gz'
+      sha256 '2213263dcb87c28f73af81e0839737b1c9e576c1f7913e7478a00a578fec5749'
     end
     if Hardware::CPU.intel?
-      url 'https://github.com/fujiwara/ecsta/releases/download/v0.2.2/ecsta_0.2.2_linux_amd64.tar.gz'
-      sha256 '4a1e0b7b464d777a492c690cb37eff97382d36a7d5ee3a8b972ec13b3b4f7269'
+      url 'https://github.com/fujiwara/ecsta/releases/download/v0.2.3/ecsta_0.2.3_linux_amd64.tar.gz'
+      sha256 '896ad31d6892625b58508991e7acefd73b4a1905e8335582b41b437741695e09'
     end
   end
 
