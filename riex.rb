@@ -1,27 +1,27 @@
 class Riex < Formula
   desc 'AWS RI expiration detector'
-  version '0.0.2'
+  version '0.0.3'
   homepage 'https://github.com/fujiwara/riex'
 
   on_macos do
     if Hardware::CPU.arm?
-      url 'https://github.com/fujiwara/riex/releases/download/v0.0.2/riex_0.0.2_darwin_arm64.tar.gz'
-      sha256 '02e140b1f0f1038548a1263790a5adfec46f10576e65a6f6886567922c0f2283'
+      url 'https://github.com/fujiwara/riex/releases/download/v0.0.3/riex_0.0.3_darwin_arm64.tar.gz'
+      sha256 '11e35e7ede4b85f854b5155b07faac512a9966d1d749a41e90dd4241ae479a8c'
     end
     if Hardware::CPU.intel?
-      url 'https://github.com/fujiwara/riex/releases/download/v0.0.2/riex_0.0.2_darwin_amd64.tar.gz'
-      sha256 '0c8c966f4e5799769d6d2c6bd43d2d9f7cdc4a38d7142646491c53453c12a8c0'
+      url 'https://github.com/fujiwara/riex/releases/download/v0.0.3/riex_0.0.3_darwin_amd64.tar.gz'
+      sha256 'f590779bebf866d4ab3769dc2c4ee2f0c4275ce52a7efe1c99cddcb7cc03d4c2'
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url 'https://github.com/fujiwara/riex/releases/download/v0.0.2/riex_0.0.2_linux_arm64.tar.gz'
-      sha256 '7522f03605fb99ed93bfa68c3bf6a513d17a9e51d3b554ea623ac55c46339bc5'
+      url 'https://github.com/fujiwara/riex/releases/download/v0.0.3/riex_0.0.3_linux_arm64.tar.gz'
+      sha256 'f03e8cade58869eb8cf69001fcab9e000a3bb624e638e16a97e7a700af0a07ee'
     end
     if Hardware::CPU.intel?
-      url 'https://github.com/fujiwara/riex/releases/download/v0.0.2/riex_0.0.2_linux_amd64.tar.gz'
-      sha256 '126822d7fcfcafbda1522395d7f4299a514522ce59c7ba9b313f28d0b9741b0d'
+      url 'https://github.com/fujiwara/riex/releases/download/v0.0.3/riex_0.0.3_linux_amd64.tar.gz'
+      sha256 '7b619d8e04d8820e631f07053c951a15aba342b812a47c26c7f4ea1e5d5e0786'
     end
   end
 
