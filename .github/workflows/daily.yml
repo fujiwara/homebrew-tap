@@ -12,14 +12,14 @@ jobs:
     steps:
       - name: Check out code
         uses: actions/checkout@v3
-
-      - name: Install maltmill
-        run: |
-          brew install Songmu/tap/maltmill
+      - uses: aquaproj/aqua-installer@v2.1.1
+        with:
+          aqua_version: v2.3.1
       - name: update & pr
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          aqua i
           make update-all
           git diff --exit-code --quiet && exit
           git diff --name-only | xargs -n 1 brew install --formula --build-from-source
@@ -28,7 +28,7 @@ jobs:
           git config --global user.name fujiwara
           git commit -m 'update to newer version'
       - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v3
+        uses: peter-evans/create-pull-request@v5
         with:
           title: update to newer version
           reviewers: fujiwara
