@@ -1,13 +1,13 @@
 class CloudwatchToMackerel < Formula
-  version '0.0.4'
+  version '0.0.5'
   homepage 'https://github.com/fujiwara/cloudwatch-to-mackerel'
   if OS.mac?
-    url "https://github.com/fujiwara/cloudwatch-to-mackerel/releases/download/v0.0.4/cloudwatch-to-mackerel_v0.0.4_darwin_amd64.zip"
-    sha256 '6a1099a0ccfad14ac404f2eec6547b126dd7131e5fa70618178481f59170b877'
+    url "https://github.com/fujiwara/cloudwatch-to-mackerel/releases/download/v0.0.5/cloudwatch-to-mackerel_v0.0.5_darwin_amd64.zip"
+    sha256 '4e7c4df0f78cf79e14f2d3b4cf1e0afc9565cb1fc597cc8aff4b29280c8dd633'
   end
   if OS.linux?
-    url "https://github.com/fujiwara/cloudwatch-to-mackerel/releases/download/v0.0.4/cloudwatch-to-mackerel_v0.0.4_linux_amd64.tar.gz"
-    sha256 'd7801fab8fc8f0de811aeaab51294c874ce4395ea0cfc6d7e7f3319dc756703b'
+    url "https://github.com/fujiwara/cloudwatch-to-mackerel/releases/download/v0.0.5/cloudwatch-to-mackerel_v0.0.5_linux_amd64.tar.gz"
+    sha256 '758c814fc9ab5af8a4cd44f3faa430e7ca33c67d8b7bd3e5eeadf23026de5aaf'
   end
   head 'https://github.com/fujiwara/cloudwatch-to-mackerel.git'
 

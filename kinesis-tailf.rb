@@ -1,27 +1,27 @@
 class KinesisTailf < Formula
   desc 'tail -f command for Amazon Kinesis Stream'
-  version '0.3.2'
+  version '0.4.0'
   homepage 'https://github.com/fujiwara/kinesis-tailf'
 
   on_macos do
     if Hardware::CPU.arm?
-      url 'https://github.com/fujiwara/kinesis-tailf/releases/download/v0.3.2/kinesis-tailf_0.3.2_darwin_arm64.tar.gz'
-      sha256 '3daf896cd545b1cbef16feb50692cf433b6b33221137aa4435d7f450498ad84e'
+      url 'https://github.com/fujiwara/kinesis-tailf/releases/download/v0.4.0/kinesis-tailf_0.4.0_darwin_arm64.tar.gz'
+      sha256 'b5156bcb969fec08d0bf099deea51109031dba7ab945b677b338d7cbc35c8ba0'
     end
     if Hardware::CPU.intel?
-      url 'https://github.com/fujiwara/kinesis-tailf/releases/download/v0.3.2/kinesis-tailf_0.3.2_darwin_amd64.tar.gz'
-      sha256 'c109cb7cd5c873238e936aeb77bb142e62351aa6e0ad4393db95ad96997ab08e'
+      url 'https://github.com/fujiwara/kinesis-tailf/releases/download/v0.4.0/kinesis-tailf_0.4.0_darwin_amd64.tar.gz'
+      sha256 'bb87a3106c91ae70c8327aee985a9fbb2c2ded5ad735fbe05c617dfbfa9b74e3'
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url 'https://github.com/fujiwara/kinesis-tailf/releases/download/v0.3.2/kinesis-tailf_0.3.2_linux_arm64.tar.gz'
-      sha256 '9089a47b2bbf6deb427772440d535e12d73b76adb1b768be2553580782ae8081'
+      url 'https://github.com/fujiwara/kinesis-tailf/releases/download/v0.4.0/kinesis-tailf_0.4.0_linux_arm64.tar.gz'
+      sha256 '36b9f6304496f654326da1baa8dbac90f934bb90f2a722e8927b3e49f0749303'
     end
     if Hardware::CPU.intel?
-      url 'https://github.com/fujiwara/kinesis-tailf/releases/download/v0.3.2/kinesis-tailf_0.3.2_linux_amd64.tar.gz'
-      sha256 '09bfe49f412c4835fd40d2490b7ace3111e8fffa068f4f718893d44c1495ab4d'
+      url 'https://github.com/fujiwara/kinesis-tailf/releases/download/v0.4.0/kinesis-tailf_0.4.0_linux_amd64.tar.gz'
+      sha256 'af7917ba7b8301591a7c26fa2c8e340899c8e7a358bb2427dd17fda1e03cfade'
     end
   end
 
