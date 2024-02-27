@@ -1,27 +1,27 @@
 class Cfft < Formula
   desc 'cfft is a testing tool for CloudFront Functions.'
-  version '0.5.2'
+  version '0.6.0'
   homepage 'https://github.com/fujiwara/cfft'
 
   on_macos do
     if Hardware::CPU.arm?
-      url 'https://github.com/fujiwara/cfft/releases/download/v0.5.2/cfft_0.5.2_darwin_arm64.tar.gz'
-      sha256 'd9958786c502d5237d0d14c3713892eda2250a62835908acd678fb2483ec09cf'
+      url 'https://github.com/fujiwara/cfft/releases/download/v0.6.0/cfft_0.6.0_darwin_arm64.tar.gz'
+      sha256 'b87151ca943854cb7867964265aa1c15c7bc1e5097902bb2fc1743f834ce762b'
     end
     if Hardware::CPU.intel?
-      url 'https://github.com/fujiwara/cfft/releases/download/v0.5.2/cfft_0.5.2_darwin_amd64.tar.gz'
-      sha256 '3543ace9d56d7e9c997145e7bb60f01cc274706d8e41ff590a820ce0a26aff0d'
+      url 'https://github.com/fujiwara/cfft/releases/download/v0.6.0/cfft_0.6.0_darwin_amd64.tar.gz'
+      sha256 '8cbdcc6431ca34fbc882fa7f4dbf731a906ec9124da992324d26ff1ce5b89c54'
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url 'https://github.com/fujiwara/cfft/releases/download/v0.5.2/cfft_0.5.2_linux_arm64.tar.gz'
-      sha256 'd2bfe7301033f6c7e01f69c51c47bb9e59f0dc91e90395cc037ad3435bcc570f'
+      url 'https://github.com/fujiwara/cfft/releases/download/v0.6.0/cfft_0.6.0_linux_arm64.tar.gz'
+      sha256 'c347e62b6dcf598373be2ac37b0f8a62d38ace979701a8d6d14b27565adc5d11'
     end
     if Hardware::CPU.intel?
-      url 'https://github.com/fujiwara/cfft/releases/download/v0.5.2/cfft_0.5.2_linux_amd64.tar.gz'
-      sha256 'fc6c2c0332963f307aacc5992a5f1f43dc162cdf1eccbc6f2a70a8d0bf37cfc0'
+      url 'https://github.com/fujiwara/cfft/releases/download/v0.6.0/cfft_0.6.0_linux_amd64.tar.gz'
+      sha256 '337b64bdfd306826e6ab3bb4aa030323885a7ca37cff80d093fcef104cd251e7'
     end
   end
 
