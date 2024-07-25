@@ -1,27 +1,27 @@
 class IamPolicyFinder < Formula
   desc 'iam-policy-finder is finder of AWS IAM Policies.'
-  version '0.0.3'
+  version '0.0.4'
   homepage 'https://github.com/fujiwara/iam-policy-finder'
 
   on_macos do
     if Hardware::CPU.arm?
-      url 'https://github.com/fujiwara/iam-policy-finder/releases/download/v0.0.3/iam-policy-finder_0.0.3_darwin_arm64.tar.gz'
-      sha256 'adc16291d3d52b44c68eea42a1dbfdff1986e05c630ab40fb8a65d709060694d'
+      url 'https://github.com/fujiwara/iam-policy-finder/releases/download/v0.0.4/iam-policy-finder_0.0.4_darwin_arm64.tar.gz'
+      sha256 '1d12c16704c77cac6811d5dad6ae8d8d475833931eb671e75db1b5d1e544e441'
     end
     if Hardware::CPU.intel?
-      url 'https://github.com/fujiwara/iam-policy-finder/releases/download/v0.0.3/iam-policy-finder_0.0.3_darwin_amd64.tar.gz'
-      sha256 'e985a0564a853f12745ca80bfe26380d262d1c7adf944c4920f96713d5286277'
+      url 'https://github.com/fujiwara/iam-policy-finder/releases/download/v0.0.4/iam-policy-finder_0.0.4_darwin_amd64.tar.gz'
+      sha256 '85da7aec24999dcea16e40cb7421301082a8e05505ea1f09172e1cb87775b018'
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url 'https://github.com/fujiwara/iam-policy-finder/releases/download/v0.0.3/iam-policy-finder_0.0.3_linux_arm64.tar.gz'
-      sha256 'd002240ad2f60b2a05960ed2dc7e8c82f357480ab25e17640c2155854f9a9ea7'
+      url 'https://github.com/fujiwara/iam-policy-finder/releases/download/v0.0.4/iam-policy-finder_0.0.4_linux_arm64.tar.gz'
+      sha256 '569a6d729fb2159e532208901a7e9504a000fa66d41a0fc387688da1a421eadf'
     end
     if Hardware::CPU.intel?
-      url 'https://github.com/fujiwara/iam-policy-finder/releases/download/v0.0.3/iam-policy-finder_0.0.3_linux_amd64.tar.gz'
-      sha256 '3ad6d2dbf60ab85a05a877ed6036088405859758b7c4c5106f875dda110851bf'
+      url 'https://github.com/fujiwara/iam-policy-finder/releases/download/v0.0.4/iam-policy-finder_0.0.4_linux_amd64.tar.gz'
+      sha256 '2c46d5ec783dddab49bf81b453121cab2d6f46756933fa9ad845208311754781'
     end
   end
 
