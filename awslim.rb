@@ -1,27 +1,27 @@
 class Awslim < Formula
   desc 'A simplified alternative to the AWS CLI for limited use cases.'
-  version '0.3.4'
+  version '0.3.5'
   homepage 'https://github.com/fujiwara/awslim'
 
   on_macos do
     if Hardware::CPU.arm?
-      url 'https://github.com/fujiwara/awslim/releases/download/v0.3.4/awslim_0.3.4_darwin_arm64.tar.gz'
-      sha256 'cd932619cbb7dd8b417bd60cc5741d43a728d02e8eb72ee1f9015471f30b4e5e'
+      url 'https://github.com/fujiwara/awslim/releases/download/v0.3.5/awslim_0.3.5_darwin_arm64.tar.gz'
+      sha256 'fac1ad44d596a29a089f19614b90f3021161fe4115a5662d80fd8f9c30652efa'
     end
     if Hardware::CPU.intel?
-      url 'https://github.com/fujiwara/awslim/releases/download/v0.3.4/awslim_0.3.4_darwin_amd64.tar.gz'
-      sha256 '27248e77ea557ddec167afdcd8c82991782f2349e2e532de46f94fa0aa6dc01c'
+      url 'https://github.com/fujiwara/awslim/releases/download/v0.3.5/awslim_0.3.5_darwin_amd64.tar.gz'
+      sha256 'fd65ca4a5465685e21b240cbac7f39da4a2e6b836148f2d45ee021c890b840f1'
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url 'https://github.com/fujiwara/awslim/releases/download/v0.3.4/awslim_0.3.4_linux_arm64.tar.gz'
-      sha256 '81405a24060d7c5de009b459ea2bfbf775ee02b68ecbcf59d0f807bad9b023cd'
+      url 'https://github.com/fujiwara/awslim/releases/download/v0.3.5/awslim_0.3.5_linux_arm64.tar.gz'
+      sha256 '54c5e371f728ea3f19102155a209fec26affc05c6aac93f8f580abc73b63b462'
     end
     if Hardware::CPU.intel?
-      url 'https://github.com/fujiwara/awslim/releases/download/v0.3.4/awslim_0.3.4_linux_amd64.tar.gz'
-      sha256 '6daae1c468b6c852b53339ea0a85384b8c245ad9e2b0e07d81b2867ab4f7dc04'
+      url 'https://github.com/fujiwara/awslim/releases/download/v0.3.5/awslim_0.3.5_linux_amd64.tar.gz'
+      sha256 'a4681112a0db27d99026649d782cdc2a32acc117da3270ef755bb74062d43c67'
     end
   end
 
