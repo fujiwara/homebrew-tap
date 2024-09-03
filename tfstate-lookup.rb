@@ -1,27 +1,27 @@
 class TfstateLookup < Formula
   desc 'Lookup resource attributes in tfstate.'
-  version '1.3.2'
+  version '1.4.0'
   homepage 'https://github.com/fujiwara/tfstate-lookup'
 
   on_macos do
     if Hardware::CPU.arm?
-      url 'https://github.com/fujiwara/tfstate-lookup/releases/download/v1.3.2/tfstate-lookup_1.3.2_darwin_arm64.tar.gz'
-      sha256 'fbbfcdffe49ac0dc794aaea680561ae625b252ba73854e642eb394c6b66c9bbc'
+      url 'https://github.com/fujiwara/tfstate-lookup/releases/download/v1.4.0/tfstate-lookup_1.4.0_darwin_arm64.tar.gz'
+      sha256 '47885c1de991e575a42126970f5ff5416d0e33e33d6a24089aa25439ae872419'
     end
     if Hardware::CPU.intel?
-      url 'https://github.com/fujiwara/tfstate-lookup/releases/download/v1.3.2/tfstate-lookup_1.3.2_darwin_amd64.tar.gz'
-      sha256 '16a74ccd072b18baeb6e4f14981f6163fa0dfe4d3611d669c585c1c8fc727a70'
+      url 'https://github.com/fujiwara/tfstate-lookup/releases/download/v1.4.0/tfstate-lookup_1.4.0_darwin_amd64.tar.gz'
+      sha256 '5a20cce63c46ef9697470e52f8a7787b1ede901952f1055475c38edcfdef25a4'
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url 'https://github.com/fujiwara/tfstate-lookup/releases/download/v1.3.2/tfstate-lookup_1.3.2_linux_arm64.tar.gz'
-      sha256 '05c6b42c8ccbf80c175732e912ded637b358f5d19aecc5bbde1b14ba26a2254f'
+      url 'https://github.com/fujiwara/tfstate-lookup/releases/download/v1.4.0/tfstate-lookup_1.4.0_linux_arm64.tar.gz'
+      sha256 '330e248345264156c6271ce6b40a9d8265dbbabfc6af41f014f46bfd1aab2c8a'
     end
     if Hardware::CPU.intel?
-      url 'https://github.com/fujiwara/tfstate-lookup/releases/download/v1.3.2/tfstate-lookup_1.3.2_linux_amd64.tar.gz'
-      sha256 '5ec8d8c02c6b11206326bc3f88f8649d249010410a480fda56f07eb40af82d4c'
+      url 'https://github.com/fujiwara/tfstate-lookup/releases/download/v1.4.0/tfstate-lookup_1.4.0_linux_amd64.tar.gz'
+      sha256 '0950a51cf90252b792f63700000816d6afb24be4349cdd4e6160a00ee6c678f7'
     end
   end
 
