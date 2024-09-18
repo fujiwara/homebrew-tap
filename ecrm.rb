@@ -1,27 +1,27 @@
 class Ecrm < Formula
   desc 'A command line tool for managing ECR repositories.'
-  version '0.4.0'
+  version '0.5.0'
   homepage 'https://github.com/fujiwara/ecrm'
 
   on_macos do
     if Hardware::CPU.arm?
-      url 'https://github.com/fujiwara/ecrm/releases/download/v0.4.0/ecrm_0.4.0_darwin_arm64.tar.gz'
-      sha256 '561b7b18565ecf6370358c54cce1caf8f2336b786caef067814a5c476a7fc78a'
+      url 'https://github.com/fujiwara/ecrm/releases/download/v0.5.0/ecrm_0.5.0_darwin_arm64.tar.gz'
+      sha256 '9efdec14080ae0e3cd6a390a0b6b6e81d8d7f06498a01275f4c72209f72c7fa5'
     end
     if Hardware::CPU.intel?
-      url 'https://github.com/fujiwara/ecrm/releases/download/v0.4.0/ecrm_0.4.0_darwin_amd64.tar.gz'
-      sha256 '5c19bb92aca0b0c7a26b2e649fe087fb4ba70be4f629f45e0e54fc8802cabff4'
+      url 'https://github.com/fujiwara/ecrm/releases/download/v0.5.0/ecrm_0.5.0_darwin_amd64.tar.gz'
+      sha256 '47559cce4304f945f05e7d39b2041c1f0ba5453373b900033466175b9e4ed560'
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url 'https://github.com/fujiwara/ecrm/releases/download/v0.4.0/ecrm_0.4.0_linux_arm64.tar.gz'
-      sha256 '35095bc34d2ada9309953e9f1efbd5850d00682fc3fc8c0e6b78fe3a65485602'
+      url 'https://github.com/fujiwara/ecrm/releases/download/v0.5.0/ecrm_0.5.0_linux_arm64.tar.gz'
+      sha256 'da39086d657dc7cbd420f2638011ab6a15f06042df5c980f62a2f202c21db01c'
     end
     if Hardware::CPU.intel?
-      url 'https://github.com/fujiwara/ecrm/releases/download/v0.4.0/ecrm_0.4.0_linux_amd64.tar.gz'
-      sha256 '85b50dd2b7e33cada587153ef69ec676153283800fe49846bfab634e10bb2a0e'
+      url 'https://github.com/fujiwara/ecrm/releases/download/v0.5.0/ecrm_0.5.0_linux_amd64.tar.gz'
+      sha256 '794d60ab60a7aaeaa24edb2ae95ee4f2135bcb883d1e5c41b46357838580c546'
     end
   end
 
