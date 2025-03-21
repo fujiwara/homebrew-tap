@@ -1,27 +1,27 @@
 class Tracer < Formula
   desc 'ECS task event/log tracer CLI'
-  version '1.1.0'
+  version '1.1.1'
   homepage 'https://github.com/fujiwara/tracer'
 
   on_macos do
     if Hardware::CPU.arm?
-      url 'https://github.com/fujiwara/tracer/releases/download/v1.1.0/tracer_1.1.0_darwin_arm64.tar.gz'
-      sha256 'a355d53c60fb362231308b9a532d4ea016359a7f8f7b29a1223d44596f69406f'
+      url 'https://github.com/fujiwara/tracer/releases/download/v1.1.1/tracer_1.1.1_darwin_arm64.tar.gz'
+      sha256 '6c48c29a1a5b393f17554a7137e93ca54e8d1f297fa17b75436d9e272d22d27f'
     end
     if Hardware::CPU.intel?
-      url 'https://github.com/fujiwara/tracer/releases/download/v1.1.0/tracer_1.1.0_darwin_amd64.tar.gz'
-      sha256 'c517f57938658d4ce6cac7e363cf77a702a2fcb7cd67d7ac4394d52a865b4909'
+      url 'https://github.com/fujiwara/tracer/releases/download/v1.1.1/tracer_1.1.1_darwin_amd64.tar.gz'
+      sha256 '17a21263ec852a7e4b6331c871c53e12bce2406b4b04c407f6046893e1c84a82'
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url 'https://github.com/fujiwara/tracer/releases/download/v1.1.0/tracer_1.1.0_linux_arm64.tar.gz'
-      sha256 '35ba554fb53aa09c86f427c6d5185e42eb75fb8452df8d3f2d4b91963800e008'
+      url 'https://github.com/fujiwara/tracer/releases/download/v1.1.1/tracer_1.1.1_linux_arm64.tar.gz'
+      sha256 'f1d8b908ba80a567099fea86110f761ce8ec6609151ca207d516815e6d0aa334'
     end
     if Hardware::CPU.intel?
-      url 'https://github.com/fujiwara/tracer/releases/download/v1.1.0/tracer_1.1.0_linux_amd64.tar.gz'
-      sha256 '9a4362b11e107edcb041fc792387a4e63076bc5dad59bbe87aabaee420bb830a'
+      url 'https://github.com/fujiwara/tracer/releases/download/v1.1.1/tracer_1.1.1_linux_amd64.tar.gz'
+      sha256 '79d04061dc355b47e0004d252e5d2231588f7e9627c5eee1799c6bd671f110ed'
     end
   end
 
