@@ -1,27 +1,27 @@
 class ApprunCli < Formula
   desc 'CLI for sakura AppRun'
-  version '0.0.1'
+  version '0.3.2'
   homepage 'https://github.com/fujiwara/apprun-cli'
 
   on_macos do
     if Hardware::CPU.arm?
-      url 'https://github.com/fujiwara/apprun-cli/releases/download/v0.0.1/apprun-cli_0.0.1_darwin_arm64.tar.gz'
-      sha256 '4622f90775d87b78a27edfb963424a2a78f562211ef63d59e4bb6a1d5669ae04'
+      url 'https://github.com/fujiwara/apprun-cli/releases/download/v0.3.2/apprun-cli_v0.3.2_darwin_arm64.tar.gz'
+      sha256 'f5f07c6593cb13dac2869da786567d0acbde773d1b5e7b13c12c566cfd740ac5'
     end
     if Hardware::CPU.intel?
-      url 'https://github.com/fujiwara/apprun-cli/releases/download/v0.0.1/apprun-cli_0.0.1_darwin_amd64.tar.gz'
-      sha256 'b44413e0e69dccd4cc8450d4bc741e5b30e2b3e65de8e0b655c16a69758d654f'
+      url 'https://github.com/fujiwara/apprun-cli/releases/download/v0.3.2/apprun-cli_v0.3.2_darwin_amd64.tar.gz'
+      sha256 'a6e1e3f7cd6d771d54d78d841cac5d9a7e767f8c01c75a6cfb38b66762df0a3a'
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url 'https://github.com/fujiwara/apprun-cli/releases/download/v0.0.1/apprun-cli_0.0.1_linux_arm64.tar.gz'
-      sha256 '1c9d234924b2b1478ce70e1a45bec27495dfbc34c29827882655464274018867'
+      url 'https://github.com/fujiwara/apprun-cli/releases/download/v0.3.2/apprun-cli_v0.3.2_linux_arm64.tar.gz'
+      sha256 '8be656fa732bea2b938f3261e29ac3255e45bb3dce3802eb7e383f72ece46a6d'
     end
     if Hardware::CPU.intel?
-      url 'https://github.com/fujiwara/apprun-cli/releases/download/v0.0.1/apprun-cli_0.0.1_linux_amd64.tar.gz'
-      sha256 '608b1ac31f950cac240999a56fbf3f6a4ef699844e1eec23e3e7eff989621be6'
+      url 'https://github.com/fujiwara/apprun-cli/releases/download/v0.3.2/apprun-cli_v0.3.2_linux_amd64.tar.gz'
+      sha256 'f9972b5ac213d9068a3b4eb352c9704cadb9deff42f0fba76d72bb8adea98c05'
     end
   end
 
