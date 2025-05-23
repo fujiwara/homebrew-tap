@@ -15,16 +15,14 @@ jobs:
       - uses: aquaproj/aqua-installer@v2.3.0
         with:
           aqua_version: v2.25.1
-      - name: install brew
+      - name: update & pr
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
           echo >> /home/runner/.bashrc
           echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> /home/runner/.bashrc
           eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-      - name: update & pr
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
           aqua i
           make update-all
           git diff --exit-code --quiet && exit
