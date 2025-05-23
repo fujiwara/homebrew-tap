@@ -20,10 +20,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           aqua i
-          aqua version
-          type xargs
-          grep -l linux *.rb
-          maltmill maprobe.rb
           make update-all
           git diff --exit-code --quiet && exit
           git diff --name-only | xargs -n 1 brew install --formula --build-from-source
