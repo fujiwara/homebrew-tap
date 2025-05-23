@@ -15,6 +15,10 @@ jobs:
       - uses: aquaproj/aqua-installer@v2.3.0
         with:
           aqua_version: v2.25.1
+      - name: install brew
+        run: |
+          NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
       - name: update & pr
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
