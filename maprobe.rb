@@ -1,13 +1,13 @@
 class Maprobe < Formula
-  version '0.9.1'
+  version '0.9.2'
   homepage 'https://github.com/fujiwara/maprobe'
   if OS.mac?
-    url "https://github.com/fujiwara/maprobe/releases/download/v0.9.1/maprobe_0.9.1_darwin_amd64.tar.gz"
-    sha256 '2145d55a353874151a2d4ad8b48161a0b7b1cddb2618584638f5192e0004d92a'
+    url "https://github.com/fujiwara/maprobe/releases/download/v0.9.2/maprobe_0.9.2_darwin_amd64.tar.gz"
+    sha256 'f4007f01c585fdf4021540fd7a6e51d5383c1979ff64a7abd0f8d11602ac8694'
   end
   if OS.linux?
-    url "https://github.com/fujiwara/maprobe/releases/download/v0.9.1/maprobe_0.9.1_linux_amd64.tar.gz"
-    sha256 '9d0d4a7dd2c9b0f3901ee999e6acccf0e6cde2b026f14530a2ef45d4228a7a80'
+    url "https://github.com/fujiwara/maprobe/releases/download/v0.9.2/maprobe_0.9.2_linux_amd64.tar.gz"
+    sha256 'ef4b28d6d512a23a0fed08ae8cf5adf0368642d37af26864ed7df542ea35d53a'
   end
   head 'https://github.com/fujiwara/maprobe.git'
 
