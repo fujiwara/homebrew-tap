@@ -12,8 +12,8 @@ jobs:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - name: Check out code
-        uses: actions/checkout@v4
-      - uses: aquaproj/aqua-installer@v2.3.0
+        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
+      - uses: aquaproj/aqua-installer@d1fe50798dbadd4eb5b98957290ca175f6b4870f # v4.0.2
         with:
           aqua_version: v2.25.1
       - name: update & pr
@@ -31,7 +31,7 @@ jobs:
           git config --global user.name fujiwara
           git commit -m 'update to newer version'
       - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v6
+        uses: peter-evans/create-pull-request@c5a7806660adbe173f04e3e038b0ccdcd758773c # v6.1.0
         with:
           title: update to newer version
           reviewers: fujiwara

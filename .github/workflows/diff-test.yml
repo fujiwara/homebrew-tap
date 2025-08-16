@@ -13,7 +13,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
       - name: Check out code
-        uses: actions/checkout@v4
+        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
 
       - run: echo "/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin" >> $GITHUB_PATH
 
@@ -22,5 +22,10 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git fetch origin master
-          git diff origin/master --name-only | fgrep .rb \
-          | xargs -n 1 brew install --formula --build-from-source
+          differs=$(git diff origin/master --name-only | fgrep .rb || true)
+          if [ -z "$differs" ]; then
+            echo "No changes found."
+            exit 0
+          fi
+          echo "Changes found in: $differs"
+          echo "$differs" | xargs -n 1 brew install --formula --build-from-source
