@@ -22,5 +22,10 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git fetch origin master
-          git diff origin/master --name-only | fgrep .rb \
-          | xargs -n 1 brew install --formula --build-from-source
+          differs=$(git diff origin/master --name-only | fgrep .rb)
+          if [ -z "$differs" ]; then
+            echo "No changes found."
+            exit 0
+          fi
+          echo "Changes found in: $differs"
+          echo "$differs" | xargs -n 1 brew install --formula --build-from-source
