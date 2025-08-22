@@ -20,6 +20,7 @@ jobs:
       - name: test
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          HOMEBREW_DEVELOPER: "true"
         run: |
           git fetch origin master
           differs=$(git diff origin/master --name-only | fgrep .rb || true)

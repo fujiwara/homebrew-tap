@@ -21,5 +21,6 @@ jobs:
       - name: test
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          HOMEBREW_DEVELOPER: "true"
         run: |
           ls *.rb | xargs -n 1 brew install --formula --build-from-source

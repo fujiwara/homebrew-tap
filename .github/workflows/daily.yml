@@ -17,6 +17,8 @@ jobs:
         with:
           aqua_version: v2.25.1
       - name: update & pr
+        env:
+          HOMEBREW_DEVELOPER: "true"
         run: |
           NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
           echo >> /home/runner/.bashrc
