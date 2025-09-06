@@ -11,4 +11,4 @@ update-all:
 	done
 
 test/%:
-	brew install --build-from-source $*
+	HOMEBREW_DEVELOPER=true brew install --build-from-source $*
