@@ -1,27 +1,27 @@
 class JsonnetArmed < Formula
   desc 'A Jsonnet rendering tool with additional useful functions.'
-  version '0.0.8'
+  version '0.0.9'
   homepage 'https://github.com/fujiwara/jsonnet-armed'
 
   on_macos do
     if Hardware::CPU.arm?
-      url 'https://github.com/fujiwara/jsonnet-armed/releases/download/v0.0.8/jsonnet-armed_0.0.8_darwin_arm64.tar.gz'
-      sha256 '82706f1eb8430eeff1ed645103bde2a27c481c71dd544b480954bf90300e404b'
+      url 'https://github.com/fujiwara/jsonnet-armed/releases/download/v0.0.9/jsonnet-armed_0.0.9_darwin_arm64.tar.gz'
+      sha256 '8f3110ff9c694ad419b6c541b071d54a510493afd7715a0fdd576198dd7142b4'
     end
     if Hardware::CPU.intel?
-      url 'https://github.com/fujiwara/jsonnet-armed/releases/download/v0.0.8/jsonnet-armed_0.0.8_darwin_amd64.tar.gz'
-      sha256 '8cd68b4767a2ec58c9be8814d81764b7797bcde5773df04ff7acf3b2f1eda694'
+      url 'https://github.com/fujiwara/jsonnet-armed/releases/download/v0.0.9/jsonnet-armed_0.0.9_darwin_amd64.tar.gz'
+      sha256 'ea4e0e80126bb416ad76f08bf74a074e30cc5d032fba575f2ee693b956bfe653'
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url 'https://github.com/fujiwara/jsonnet-armed/releases/download/v0.0.8/jsonnet-armed_0.0.8_linux_arm64.tar.gz'
-      sha256 'f4dcc4d45de445ceff47d7eccb8211d72858dc789c4c7dd1c21b27b3003e3d34'
+      url 'https://github.com/fujiwara/jsonnet-armed/releases/download/v0.0.9/jsonnet-armed_0.0.9_linux_arm64.tar.gz'
+      sha256 '35789695f254e783ec151477c20835fe09e3cb9bd2050e883ea07eb0f0835521'
     end
     if Hardware::CPU.intel?
-      url 'https://github.com/fujiwara/jsonnet-armed/releases/download/v0.0.8/jsonnet-armed_0.0.8_linux_amd64.tar.gz'
-      sha256 '2d8b6bb37b20231b03b729d61d5594fa14e89c6a3e20f32f7ef2ac87432b9429'
+      url 'https://github.com/fujiwara/jsonnet-armed/releases/download/v0.0.9/jsonnet-armed_0.0.9_linux_amd64.tar.gz'
+      sha256 '84ad44d007d51310ebe62862b37174a6c3d22b4420994e6297fdecb95789e8d8'
     end
   end
 
