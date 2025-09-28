@@ -1,27 +1,27 @@
 class JsonnetArmed < Formula
   desc 'A Jsonnet rendering tool with additional useful functions.'
-  version '0.0.9'
+  version '0.0.11'
   homepage 'https://github.com/fujiwara/jsonnet-armed'
 
   on_macos do
     if Hardware::CPU.arm?
-      url 'https://github.com/fujiwara/jsonnet-armed/releases/download/v0.0.9/jsonnet-armed_0.0.9_darwin_arm64.tar.gz'
-      sha256 '8f3110ff9c694ad419b6c541b071d54a510493afd7715a0fdd576198dd7142b4'
+      url 'https://github.com/fujiwara/jsonnet-armed/releases/download/v0.0.11/jsonnet-armed_0.0.11_darwin_arm64.tar.gz'
+      sha256 '3d5bb7fd7728ca4887cbaf5c05562131d3b39fb5bb47b30dc90a4df504590095'
     end
     if Hardware::CPU.intel?
-      url 'https://github.com/fujiwara/jsonnet-armed/releases/download/v0.0.9/jsonnet-armed_0.0.9_darwin_amd64.tar.gz'
-      sha256 'ea4e0e80126bb416ad76f08bf74a074e30cc5d032fba575f2ee693b956bfe653'
+      url 'https://github.com/fujiwara/jsonnet-armed/releases/download/v0.0.11/jsonnet-armed_0.0.11_darwin_amd64.tar.gz'
+      sha256 'a50a6759eadafaeaa484ca6e4b47d6e1b653daa57a250c1b825124bae7395b27'
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url 'https://github.com/fujiwara/jsonnet-armed/releases/download/v0.0.9/jsonnet-armed_0.0.9_linux_arm64.tar.gz'
-      sha256 '35789695f254e783ec151477c20835fe09e3cb9bd2050e883ea07eb0f0835521'
+      url 'https://github.com/fujiwara/jsonnet-armed/releases/download/v0.0.11/jsonnet-armed_0.0.11_linux_arm64.tar.gz'
+      sha256 'a9dd6ae1ba1484abeb20c3f1f31d72f1ad9765ba87802c37203c95fdb86b3a7f'
     end
     if Hardware::CPU.intel?
-      url 'https://github.com/fujiwara/jsonnet-armed/releases/download/v0.0.9/jsonnet-armed_0.0.9_linux_amd64.tar.gz'
-      sha256 '84ad44d007d51310ebe62862b37174a6c3d22b4420994e6297fdecb95789e8d8'
+      url 'https://github.com/fujiwara/jsonnet-armed/releases/download/v0.0.11/jsonnet-armed_0.0.11_linux_amd64.tar.gz'
+      sha256 'ec21cbb84f657d94ef745fcb806f57b018a3de3b9d09aa774a83015f6204b618'
     end
   end
 
