@@ -1,27 +1,27 @@
 class JsonnetArmed < Formula
   desc 'A Jsonnet rendering tool with additional useful functions.'
-  version '0.0.11'
+  version '0.0.12'
   homepage 'https://github.com/fujiwara/jsonnet-armed'
 
   on_macos do
     if Hardware::CPU.arm?
-      url 'https://github.com/fujiwara/jsonnet-armed/releases/download/v0.0.11/jsonnet-armed_0.0.11_darwin_arm64.tar.gz'
-      sha256 '3d5bb7fd7728ca4887cbaf5c05562131d3b39fb5bb47b30dc90a4df504590095'
+      url 'https://github.com/fujiwara/jsonnet-armed/releases/download/v0.0.12/jsonnet-armed_0.0.12_darwin_arm64.tar.gz'
+      sha256 '303cf66ee9dcccce91aba030ada629f9c3832885227928824dd681f035a551ad'
     end
     if Hardware::CPU.intel?
-      url 'https://github.com/fujiwara/jsonnet-armed/releases/download/v0.0.11/jsonnet-armed_0.0.11_darwin_amd64.tar.gz'
-      sha256 'a50a6759eadafaeaa484ca6e4b47d6e1b653daa57a250c1b825124bae7395b27'
+      url 'https://github.com/fujiwara/jsonnet-armed/releases/download/v0.0.12/jsonnet-armed_0.0.12_darwin_amd64.tar.gz'
+      sha256 '7fb5d8ebe258e7d6229823c117f3bca5401b2c5517a963a00d354072271e251a'
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url 'https://github.com/fujiwara/jsonnet-armed/releases/download/v0.0.11/jsonnet-armed_0.0.11_linux_arm64.tar.gz'
-      sha256 'a9dd6ae1ba1484abeb20c3f1f31d72f1ad9765ba87802c37203c95fdb86b3a7f'
+      url 'https://github.com/fujiwara/jsonnet-armed/releases/download/v0.0.12/jsonnet-armed_0.0.12_linux_arm64.tar.gz'
+      sha256 'ec66531c69f613054d25073d819f2c624b1ee63bda81cb6024ca02d84d66de8e'
     end
     if Hardware::CPU.intel?
-      url 'https://github.com/fujiwara/jsonnet-armed/releases/download/v0.0.11/jsonnet-armed_0.0.11_linux_amd64.tar.gz'
-      sha256 'ec21cbb84f657d94ef745fcb806f57b018a3de3b9d09aa774a83015f6204b618'
+      url 'https://github.com/fujiwara/jsonnet-armed/releases/download/v0.0.12/jsonnet-armed_0.0.12_linux_amd64.tar.gz'
+      sha256 '579985d6cff10fc537059f79e9770ec88d61fd99eb70f9663bbbf1cc62fc8b35'
     end
   end
 
