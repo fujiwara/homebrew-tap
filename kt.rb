@@ -1,27 +1,27 @@
 class Kt < Formula
   desc 'Kafka command line tool that likes JSON'
-  version '15.1.4'
+  version '16.0.0'
   homepage 'https://github.com/fujiwara/kt'
 
   on_macos do
     if Hardware::CPU.arm?
-      url 'https://github.com/fujiwara/kt/releases/download/v15.1.4/kt_15.1.4_darwin_arm64.tar.gz'
-      sha256 '46be453f42bc6816b6c11077f18cfd8082456f77ccb3c35efa46d80b97a96abd'
+      url 'https://github.com/fujiwara/kt/releases/download/v16.0.0/kt_16.0.0_darwin_arm64.tar.gz'
+      sha256 'bf3525d82c11b8d400cf9acd1890b7636f0820becce2dc564bf93b90cf393a72'
     end
     if Hardware::CPU.intel?
-      url 'https://github.com/fujiwara/kt/releases/download/v15.1.4/kt_15.1.4_darwin_amd64.tar.gz'
-      sha256 '0aace5c24dc918ee71b04ca27e7bab561eb54482be7b49ef7282893c74b95b37'
+      url 'https://github.com/fujiwara/kt/releases/download/v16.0.0/kt_16.0.0_darwin_amd64.tar.gz'
+      sha256 '14d25bc17aa84c74328fa56207222e6dfc8fe2228508fec2c22166b2ffad3212'
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url 'https://github.com/fujiwara/kt/releases/download/v15.1.4/kt_15.1.4_linux_arm64.tar.gz'
-      sha256 '4d3afecab356335ed79beb30c674fd34a3f9c631f7f2088c1d8d12f9b5ebc508'
+      url 'https://github.com/fujiwara/kt/releases/download/v16.0.0/kt_16.0.0_linux_arm64.tar.gz'
+      sha256 '4a8c145cb9f2116d28ca348e9281f37b29a450982ea1b275e3f206970e8a9fc9'
     end
     if Hardware::CPU.intel?
-      url 'https://github.com/fujiwara/kt/releases/download/v15.1.4/kt_15.1.4_linux_amd64.tar.gz'
-      sha256 '5da07bda8ec437ce6fffd3bb2706d8c7da0ce0dd0922916b44e85817da644c15'
+      url 'https://github.com/fujiwara/kt/releases/download/v16.0.0/kt_16.0.0_linux_amd64.tar.gz'
+      sha256 '6a7cf20d3465674e2bc2ede9af7d787a5c6babecaf33bc53861608d4bfcce62f'
     end
   end
 
