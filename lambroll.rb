@@ -1,27 +1,27 @@
 class Lambroll < Formula
   desc 'lambroll is a minimal deployment tool for AWS Lambda.'
-  version '1.3.2'
+  version '1.4.1'
   homepage 'https://github.com/fujiwara/lambroll'
 
   on_macos do
     if Hardware::CPU.arm?
-      url 'https://github.com/fujiwara/lambroll/releases/download/v1.3.2/lambroll_v1.3.2_darwin_arm64.tar.gz'
-      sha256 '60c26b7d14e7369db61fb3f47265f7c3f42a354f33d37953bf28aaf45fdf6964'
+      url 'https://github.com/fujiwara/lambroll/releases/download/v1.4.1/lambroll_v1.4.1_darwin_arm64.tar.gz'
+      sha256 '9a6e1f17c2f9accf79e9444e78ef71291fb378c3194ea0645e8f33bb29bb2026'
     end
     if Hardware::CPU.intel?
-      url 'https://github.com/fujiwara/lambroll/releases/download/v1.3.2/lambroll_v1.3.2_darwin_amd64.tar.gz'
-      sha256 'fd4fd2508dd86cf358b554f1edd6b03def07baf2ed8871094672560f6a49269a'
+      url 'https://github.com/fujiwara/lambroll/releases/download/v1.4.1/lambroll_v1.4.1_darwin_amd64.tar.gz'
+      sha256 'e8f5b448d334e20f257d7d4f1025f7cd8d29157928435866ac64d112ba009ea3'
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url 'https://github.com/fujiwara/lambroll/releases/download/v1.3.2/lambroll_v1.3.2_linux_arm64.tar.gz'
-      sha256 '140dd1e519a50626a9b62c1f4ac3421180585f15054256006225bd252e8ff822'
+      url 'https://github.com/fujiwara/lambroll/releases/download/v1.4.1/lambroll_v1.4.1_linux_arm64.tar.gz'
+      sha256 '888ea7afb62fdb337d4aff47dcf1e737b49353b25247ebfa4e399d7c2cf2bd98'
     end
     if Hardware::CPU.intel?
-      url 'https://github.com/fujiwara/lambroll/releases/download/v1.3.2/lambroll_v1.3.2_linux_amd64.tar.gz'
-      sha256 '3a906068bddd2dc97b84d540a652dc41975619003dec1e69756479baed091488'
+      url 'https://github.com/fujiwara/lambroll/releases/download/v1.4.1/lambroll_v1.4.1_linux_amd64.tar.gz'
+      sha256 'd85f1d9840e03d52953f27c4f5195049340ae0b9cdc6a400b61f267198a618bc'
     end
   end
 
