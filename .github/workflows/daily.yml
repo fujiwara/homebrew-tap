@@ -13,12 +13,18 @@ jobs:
     steps:
       - name: Check out code
         uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: '22'
       - uses: aquaproj/aqua-installer@d1fe50798dbadd4eb5b98957290ca175f6b4870f # v4.0.2
         with:
           aqua_version: v2.25.1
       - name: update & pr
         env:
           HOMEBREW_DEVELOPER: "true"
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          USE_COPILOT_SDK: "false"
         run: |
           NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
           echo >> /home/runner/.bashrc
@@ -27,13 +33,27 @@ jobs:
           aqua i
           make update-all
           git diff --exit-code --quiet && exit
+
+          # Save diff before committing for PR body generation
+          git diff > /tmp/formula-diff.txt
           git diff --name-only | xargs -n 1 brew install --formula --build-from-source
-          git add *.rb
+
+          # Generate PR body (uses Copilot SDK if USE_COPILOT_SDK=true, otherwise regex parser)
+          if [ "$USE_COPILOT_SDK" = "true" ]; then
+            npm install -g @github/copilot
+          fi
+          cd .github/scripts && npm install && cd ../..
+          node .github/scripts/generate-pr-body.mjs < /tmp/formula-diff.txt > /tmp/pr-body.md 2>/dev/null || echo "" > /tmp/pr-body.md
+
+          branch="create-pull-request/patch"
           git config --global user.email fujiwara.shunichiro@gmail.com
           git config --global user.name fujiwara
+          git checkout -b "$branch"
+          git add *.rb
           git commit -m 'update to newer version'
-      - name: Create Pull Request
-        uses: peter-evans/create-pull-request@c5a7806660adbe173f04e3e038b0ccdcd758773c # v6.1.0
-        with:
-          title: update to newer version
-          reviewers: fujiwara
+          git push -f origin "$branch"
+          if gh pr list --head "$branch" --state open --json number --jq '.[0].number' | grep -q .; then
+            gh pr edit --body-file /tmp/pr-body.md "$(gh pr list --head "$branch" --state open --json number --jq '.[0].number')"
+          else
+            gh pr create --title "update to newer version" --body-file /tmp/pr-body.md --reviewer fujiwara
+          fi

@@ -1,3 +1,4 @@
 *~
 *.zip
 *.gz
+.github/scripts/node_modules/
