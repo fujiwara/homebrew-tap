@@ -20,30 +20,81 @@ jobs:
       - uses: aquaproj/aqua-installer@d1fe50798dbadd4eb5b98957290ca175f6b4870f # v4.0.2
         with:
           aqua_version: v2.25.1
-      - name: update & pr
+      - name: update formulae
+        run: |
+          aqua i
+          update_failures=""
+          for file in $(grep -l linux *.rb); do
+            echo "Updating $file"
+            if ! maltmill -w "$file"; then
+              echo "::warning::Failed to update $file"
+              update_failures="$update_failures $file"
+            fi
+          done
+          if [ -n "$update_failures" ]; then
+            echo "UPDATE_FAILURES=$update_failures" >> "$GITHUB_ENV"
+          fi
+      - name: check for changes
+        id: check
+        run: |
+          if git diff --exit-code --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+      - name: install homebrew and test builds
+        if: steps.check.outputs.changed == 'true'
         env:
           HOMEBREW_DEVELOPER: "true"
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          USE_COPILOT_SDK: "false"
         run: |
           NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
           echo >> /home/runner/.bashrc
           echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> /home/runner/.bashrc
           eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-          aqua i
-          make update-all
-          git diff --exit-code --quiet && exit
 
-          # Save diff before committing for PR body generation
           git diff > /tmp/formula-diff.txt
-          git diff --name-only | xargs -n 1 brew install --formula --build-from-source
-
-          # Generate PR body (uses Copilot SDK if USE_COPILOT_SDK=true, otherwise regex parser)
+          build_failures=""
+          for file in $(git diff --name-only -- '*.rb'); do
+            echo "Building $file"
+            if ! brew install --formula --build-from-source "$file"; then
+              echo "::warning::Failed to build $file"
+              build_failures="$build_failures $file"
+            fi
+          done
+          if [ -n "$build_failures" ]; then
+            echo "BUILD_FAILURES=$build_failures" >> "$GITHUB_ENV"
+          fi
+      - name: create pull request
+        if: steps.check.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          USE_COPILOT_SDK: "false"
+        run: |
+          # Generate PR body
           if [ "$USE_COPILOT_SDK" = "true" ]; then
             npm install -g @github/copilot
           fi
           cd .github/scripts && npm install && cd ../..
-          node .github/scripts/generate-pr-body.mjs < /tmp/formula-diff.txt > /tmp/pr-body.md 2>/dev/null || echo "" > /tmp/pr-body.md
+          pr_body=$(node .github/scripts/generate-pr-body.mjs < /tmp/formula-diff.txt 2>/dev/null || echo "")
+
+          # Append failure summary if any
+          failures=""
+          if [ -n "$UPDATE_FAILURES" ]; then
+            failures="${failures}\n### Update Failures\nThe following formulae failed to update:\n"
+            for f in $UPDATE_FAILURES; do
+              failures="${failures}- \`$f\`\n"
+            done
+          fi
+          if [ -n "$BUILD_FAILURES" ]; then
+            failures="${failures}\n### Build Failures\nThe following formulae failed to build from source:\n"
+            for f in $BUILD_FAILURES; do
+              failures="${failures}- \`$f\`\n"
+            done
+          fi
+          if [ -n "$failures" ]; then
+            pr_body="${pr_body}$(echo -e "\n---\n$failures")"
+          fi
+          echo "$pr_body" > /tmp/pr-body.md
 
           branch="create-pull-request/patch"
           git config --global user.email fujiwara.shunichiro@gmail.com
