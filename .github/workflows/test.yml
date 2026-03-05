@@ -23,4 +23,15 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           HOMEBREW_DEVELOPER: "true"
         run: |
-          ls *.rb | xargs -n 1 brew install --formula --build-from-source
+          failed=""
+          for file in *.rb; do
+            echo "Building $file"
+            if ! brew install --formula --build-from-source "$file"; then
+              echo "::error::Failed to build $file"
+              failed="$failed $file"
+            fi
+          done
+          if [ -n "$failed" ]; then
+            echo "The following formulae failed to build:$failed"
+            exit 1
+          fi

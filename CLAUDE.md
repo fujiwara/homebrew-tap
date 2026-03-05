@@ -6,9 +6,13 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 This is a Homebrew tap (`fujiwara/tap`) containing formulae for CLI tools authored by [@fujiwara](https://github.com/fujiwara). Formulae are Ruby `.rb` files in the repository root (and occasionally in `Formula/`).
 
-## Key Tool
+## Prerequisites
 
-Formulae are managed with [maltmill](https://github.com/Songmu/maltmill) (installed via [aqua](https://aquaproj.github.io/)). Install it with `aqua i`.
+Install [maltmill](https://github.com/Songmu/maltmill) via [aqua](https://aquaproj.github.io/):
+
+```bash
+aqua i
+```
 
 ## Commands
 
@@ -16,10 +20,10 @@ Formulae are managed with [maltmill](https://github.com/Songmu/maltmill) (instal
 # Update a specific formula to the latest release
 make update/<tool-name>.rb
 
-# Update all formulae that have linux support
+# Update all formulae that have linux support (uses `grep -l linux *.rb`)
 make update-all
 
-# Create a new formula
+# Create a new formula for a fujiwara/<tool-name> GitHub repo
 make create/<tool-name>
 
 # Test a formula locally (requires Homebrew installed)
