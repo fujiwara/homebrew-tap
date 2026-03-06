@@ -41,6 +41,17 @@ There are two formula styles:
 
 When adding or updating a formula, use `maltmill` which handles version bumping, URL generation, and SHA256 computation automatically.
 
+## Per-formula maltmill options
+
+The Makefile supports per-formula maltmill options via `OPTS_<tool-name>` variables. When a GitHub release contains multiple archives for different tools, use the `-asset` option to select the correct one.
+
+```makefile
+# Example: simplemq-cli release includes both simplemq-cli and simplemq-localserver archives
+OPTS_simplemq-cli = -asset simplemq-cli
+```
+
+The `update/%` target expands `$(OPTS_$*)` automatically, so formulae without a matching variable run maltmill with no extra options.
+
 ## CI/CD
 
 - **daily.yml** — Runs twice daily. Uses `make update-all` to check for new releases, builds changed formulae from source, and opens a PR via `gh` CLI. PR description is auto-generated using GitHub Copilot SDK (`.github/scripts/generate-pr-body.mjs`) with a regex-based fallback.
