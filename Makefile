@@ -1,5 +1,7 @@
+OPTS_simplemq-cli = -asset simplemq-cli
+
 update/%:
-	maltmill -w $*.rb
+	maltmill -w $(OPTS_$*) $*.rb
 
 create/%:
 	maltmill new -w fujiwara/$*
@@ -7,7 +9,7 @@ create/%:
 update-all:
 	for file in $(shell grep -l linux *.rb); do \
 		echo "Updating $$file"; \
-		maltmill -w $$file; \
+		$(MAKE) update/$${file}; \
 	done
 
 test/%:
