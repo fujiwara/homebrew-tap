@@ -1,26 +1,26 @@
 class SimplemqCli < Formula
-  version '0.5.0'
+  version '0.6.0'
   homepage 'https://github.com/fujiwara/simplemq-cli'
 
   on_macos do
     if Hardware::CPU.arm?
-      url 'https://github.com/fujiwara/simplemq-cli/releases/download/v0.5.0/simplemq-cli_0.5.0_darwin_arm64.tar.gz'
-      sha256 'cb3159348fb9a7cdff675a2ea1693eed6f1b22b99be0bad797c6d4c22c32eab4'
+      url 'https://github.com/fujiwara/simplemq-cli/releases/download/v0.6.0/simplemq-localserver_0.6.0_darwin_arm64.tar.gz'
+      sha256 '6883d030f1797fdcfb542cba1031fc36e50f62dd17ac2424ab0fb386682fed7d'
     end
     if Hardware::CPU.intel?
-      url 'https://github.com/fujiwara/simplemq-cli/releases/download/v0.5.0/simplemq-cli_0.5.0_darwin_amd64.tar.gz'
-      sha256 '7b333ba963d18ea7906c260f9599f71fd7e618aa3008d87f4b9920f8d7a136f1'
+      url 'https://github.com/fujiwara/simplemq-cli/releases/download/v0.6.0/simplemq-localserver_0.6.0_darwin_amd64.tar.gz'
+      sha256 '01849764cac41cf732a6d3b2f5148672ec7be91f9205bb20945498230a83ace6'
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url 'https://github.com/fujiwara/simplemq-cli/releases/download/v0.5.0/simplemq-cli_0.5.0_linux_arm64.tar.gz'
-      sha256 '9aaed373362baf67ad4a37627c46456483c564ddd892d6276121cc0750d6ded0'
+      url 'https://github.com/fujiwara/simplemq-cli/releases/download/v0.6.0/simplemq-localserver_0.6.0_linux_arm64.tar.gz'
+      sha256 'd4f31a9ff6421882e813a85e69be04fdd00ac813a551a133ef1ad4534445ccf9'
     end
     if Hardware::CPU.intel?
-      url 'https://github.com/fujiwara/simplemq-cli/releases/download/v0.5.0/simplemq-cli_0.5.0_linux_amd64.tar.gz'
-      sha256 'f3be0b43e5a4e293fefe80e882901b75f5435527c164bca1ccda49fe7ad9eb7e'
+      url 'https://github.com/fujiwara/simplemq-cli/releases/download/v0.6.0/simplemq-localserver_0.6.0_linux_amd64.tar.gz'
+      sha256 'f800b3c0e419b7367987490da5b213ab50f47a500d6723016f6378c18a2d4786'
     end
   end
 
