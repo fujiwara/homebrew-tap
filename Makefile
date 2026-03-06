@@ -1,7 +1,7 @@
 OPTS_simplemq-cli = -asset simplemq-cli
 
-update/%:
-	maltmill -w $(OPTS_$*) $*.rb
+update/%.rb:
+	maltmill $(OPTS_$*) -w $*.rb
 
 create/%:
 	maltmill new -w fujiwara/$*
