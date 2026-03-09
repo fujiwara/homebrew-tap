@@ -24,17 +24,7 @@ jobs:
         run: |
           aqua i
           maltmill -h | grep Version
-          update_failures=""
-          for file in $(grep -l linux *.rb); do
-            echo "Updating $file"
-            if ! maltmill -w "$file"; then
-              echo "::warning::Failed to update $file"
-              update_failures="$update_failures $file"
-            fi
-          done
-          if [ -n "$update_failures" ]; then
-            echo "UPDATE_FAILURES=$update_failures" >> "$GITHUB_ENV"
-          fi
+          make update-all
       - name: check for changes
         id: check
         run: |
