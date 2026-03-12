@@ -1,28 +1,28 @@
 class SimplemqSubscriber < Formula
   desc 'simplemq-subscriber is a subscriber for Sakura SimpleMQ'
-  version '0.0.2'
+  version '0.0.3'
   homepage 'https://github.com/fujiwara/simplemq-subscriber'
   license 'MIT'
 
   on_macos do
     if Hardware::CPU.arm?
-      url 'https://github.com/fujiwara/simplemq-subscriber/releases/download/v0.0.2/simplemq-subscriber_v0.0.2_darwin_arm64.tar.gz'
-      sha256 'f0d5102949afc2263b57aa7900e4a16cce363ad0da0bdfb6d6e5af9264c7645b'
+      url 'https://github.com/fujiwara/simplemq-subscriber/releases/download/v0.0.3/simplemq-subscriber_v0.0.3_darwin_arm64.tar.gz'
+      sha256 'cb85d5d1678eeb604b69fd5a71c30174c02d8b2dec0fe5f18c8c5e39a978972b'
     end
     if Hardware::CPU.intel?
-      url 'https://github.com/fujiwara/simplemq-subscriber/releases/download/v0.0.2/simplemq-subscriber_v0.0.2_darwin_amd64.tar.gz'
-      sha256 '76d8cd32787fd9f38934ecc9b82e2dd225337254779aa24a65b8e3a85fdf133c'
+      url 'https://github.com/fujiwara/simplemq-subscriber/releases/download/v0.0.3/simplemq-subscriber_v0.0.3_darwin_amd64.tar.gz'
+      sha256 '028c19c973cf2b617ed3f5e9266625d1c1860f0dce353e13e2f965ecb6f0aea5'
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url 'https://github.com/fujiwara/simplemq-subscriber/releases/download/v0.0.2/simplemq-subscriber_v0.0.2_linux_arm64.tar.gz'
-      sha256 'ce036129674d55ce5978f22aca4cf43b5d696c3cf172e11a16ded324b6949431'
+      url 'https://github.com/fujiwara/simplemq-subscriber/releases/download/v0.0.3/simplemq-subscriber_v0.0.3_linux_arm64.tar.gz'
+      sha256 'ffcdbe20482c12b655ce72476afc5576c7a9d32c4a71ebcd5695957b68cc7ec3'
     end
     if Hardware::CPU.intel?
-      url 'https://github.com/fujiwara/simplemq-subscriber/releases/download/v0.0.2/simplemq-subscriber_v0.0.2_linux_amd64.tar.gz'
-      sha256 '4aea104506d5b8d1b938d4b1d0ebea88d932655de55642245f4cae8634740053'
+      url 'https://github.com/fujiwara/simplemq-subscriber/releases/download/v0.0.3/simplemq-subscriber_v0.0.3_linux_amd64.tar.gz'
+      sha256 'bdf81b8e630d68625027db0bba3d4582742625612636d1748ae2e2779a5dee48'
     end
   end
 
