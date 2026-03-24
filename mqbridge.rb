@@ -1,27 +1,27 @@
 class Mqbridge < Formula
   desc 'mqbridge is a replicator between RabbitMQ and Sakura SimpleMQ'
-  version '0.3.0'
+  version '0.3.1'
   homepage 'https://github.com/fujiwara/mqbridge'
 
   on_macos do
     if Hardware::CPU.arm?
-      url 'https://github.com/fujiwara/mqbridge/releases/download/v0.3.0/mqbridge_v0.3.0_darwin_arm64.tar.gz'
-      sha256 '05d8726bd11ad95ec429994d9974737c64b3d9665302a1bb41775e1a949e75b8'
+      url 'https://github.com/fujiwara/mqbridge/releases/download/v0.3.1/mqbridge_v0.3.1_darwin_arm64.tar.gz'
+      sha256 'f6c3dac9f19df679b11ef6a37f8f3c0a246650cd76c0f65e987a9fe3e5269a7c'
     end
     if Hardware::CPU.intel?
-      url 'https://github.com/fujiwara/mqbridge/releases/download/v0.3.0/mqbridge_v0.3.0_darwin_amd64.tar.gz'
-      sha256 '88da6745fb998710ddb33a2d14118acedb509420a96c5d55c56e51987eaeda5a'
+      url 'https://github.com/fujiwara/mqbridge/releases/download/v0.3.1/mqbridge_v0.3.1_darwin_amd64.tar.gz'
+      sha256 '4ce436f0aa655eb1fe2540b6338a2a88fbba0105c9aec4bc1283d02bbb3e1cd5'
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url 'https://github.com/fujiwara/mqbridge/releases/download/v0.3.0/mqbridge_v0.3.0_linux_arm64.tar.gz'
-      sha256 '13184ccb3af36e611e51cd5f4d5c0b433ac4bcced5a9477fc97c01d539ff0f92'
+      url 'https://github.com/fujiwara/mqbridge/releases/download/v0.3.1/mqbridge_v0.3.1_linux_arm64.tar.gz'
+      sha256 'ae0ae960cad9845cbc8f4ff9dfb87757b4096cef5cff02dbc69cc16ea1799d13'
     end
     if Hardware::CPU.intel?
-      url 'https://github.com/fujiwara/mqbridge/releases/download/v0.3.0/mqbridge_v0.3.0_linux_amd64.tar.gz'
-      sha256 '29dc27dc83f705061d91e7213f110de650357a74ad3bd6559f9de6bd517667b1'
+      url 'https://github.com/fujiwara/mqbridge/releases/download/v0.3.1/mqbridge_v0.3.1_linux_amd64.tar.gz'
+      sha256 'cd8e11138fc0f49e92eab443c8f3d38796a101d285296ff46ac06196c7af98de'
     end
   end
 
