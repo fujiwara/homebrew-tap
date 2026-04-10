@@ -1,28 +1,28 @@
 class Mqsubscriber < Formula
   desc 'A subscriber for Sakura SimpleMQ and RabbitMQ.'
-  version '0.7.0'
+  version '0.7.2'
   homepage 'https://github.com/fujiwara/mqsubscriber'
   license 'MIT'
 
   on_macos do
     if Hardware::CPU.arm?
-      url 'https://github.com/fujiwara/mqsubscriber/releases/download/v0.7.0/mqsubscriber_v0.7.0_darwin_arm64.tar.gz'
-      sha256 '7eac715004b80225b88738960c09ff8b46c3cd8fa3a085d379b3eee9f8a5a573'
+      url 'https://github.com/fujiwara/mqsubscriber/releases/download/v0.7.2/mqsubscriber_v0.7.2_darwin_arm64.tar.gz'
+      sha256 'fd5211d907d3b48e7ca208d4b9520703fa346c7dbfb983bf770d5bd311bb57bc'
     end
     if Hardware::CPU.intel?
-      url 'https://github.com/fujiwara/mqsubscriber/releases/download/v0.7.0/mqsubscriber_v0.7.0_darwin_amd64.tar.gz'
-      sha256 '5bc0b8bc04f7bd6ca660bf56edabf3fc9f198fe00fa51c4271ccd733e02e6cbf'
+      url 'https://github.com/fujiwara/mqsubscriber/releases/download/v0.7.2/mqsubscriber_v0.7.2_darwin_amd64.tar.gz'
+      sha256 '2763e3e422050bbc70c0837979bc6bde01e836ebc7da9632f124e5c983d9a299'
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url 'https://github.com/fujiwara/mqsubscriber/releases/download/v0.7.0/mqsubscriber_v0.7.0_linux_arm64.tar.gz'
-      sha256 '7921bedfa533bd281a7afa453a026b381b317275ec9e39f5c80e87e09ad41fc6'
+      url 'https://github.com/fujiwara/mqsubscriber/releases/download/v0.7.2/mqsubscriber_v0.7.2_linux_arm64.tar.gz'
+      sha256 '49eb874016ade935171a66d2814a99e685f7c0dbddaf726102b4177ea49d1c11'
     end
     if Hardware::CPU.intel?
-      url 'https://github.com/fujiwara/mqsubscriber/releases/download/v0.7.0/mqsubscriber_v0.7.0_linux_amd64.tar.gz'
-      sha256 '9c92e06b2e94a9a713aa2ff7a8e2aa970f7fee6d1e0018ec147bc69a3fe7cee4'
+      url 'https://github.com/fujiwara/mqsubscriber/releases/download/v0.7.2/mqsubscriber_v0.7.2_linux_amd64.tar.gz'
+      sha256 '82f23a9fea37f783b5f7ad9055290ed549dcbb356215c97126ae98ab2c846c80'
     end
   end
 
