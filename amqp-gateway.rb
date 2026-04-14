@@ -1,28 +1,28 @@
 class AmqpGateway < Formula
   desc 'Publish messages to AMQP broker (RabbitMQ) via HTTP.'
-  version '0.1.0'
+  version '0.1.1'
   homepage 'https://github.com/fujiwara/amqp-gateway'
   license 'MIT'
 
   on_macos do
     if Hardware::CPU.arm?
-      url 'https://github.com/fujiwara/amqp-gateway/releases/download/v0.1.0/amqp-gateway_v0.1.0_darwin_arm64.tar.gz'
-      sha256 'ad9e070f409180ec98f7259f5baeebe85efaa147647056bc6476c453f3355de0'
+      url 'https://github.com/fujiwara/amqp-gateway/releases/download/v0.1.1/amqp-gateway_v0.1.1_darwin_arm64.tar.gz'
+      sha256 '1555760bc179244cfcc809664a73e015850c55cb58f8f82f72aa5ab5db9ef5dd'
     end
     if Hardware::CPU.intel?
-      url 'https://github.com/fujiwara/amqp-gateway/releases/download/v0.1.0/amqp-gateway_v0.1.0_darwin_amd64.tar.gz'
-      sha256 'abd85ccdf9a33d8c122521925d8570a040122e3fefe737ec58d3b5b50268400e'
+      url 'https://github.com/fujiwara/amqp-gateway/releases/download/v0.1.1/amqp-gateway_v0.1.1_darwin_amd64.tar.gz'
+      sha256 'dc1c372b94ca14fc29ce1fdafe643bf6d1c310d7a821ec688ce655e23f4191c3'
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url 'https://github.com/fujiwara/amqp-gateway/releases/download/v0.1.0/amqp-gateway_v0.1.0_linux_arm64.tar.gz'
-      sha256 '7bc7c86a91828f92a9a89df6f1dbe386abcf6929826bc6f2a81217ed54b55671'
+      url 'https://github.com/fujiwara/amqp-gateway/releases/download/v0.1.1/amqp-gateway_v0.1.1_linux_arm64.tar.gz'
+      sha256 'b70b4031a31e1d44faa2c5f358a199bdf97bac1a6347301a306628468e21796b'
     end
     if Hardware::CPU.intel?
-      url 'https://github.com/fujiwara/amqp-gateway/releases/download/v0.1.0/amqp-gateway_v0.1.0_linux_amd64.tar.gz'
-      sha256 '1e5ce98a00a0561a10612b9e35fa085f1236c72bc9fe3f0665c63d6693660f6f'
+      url 'https://github.com/fujiwara/amqp-gateway/releases/download/v0.1.1/amqp-gateway_v0.1.1_linux_amd64.tar.gz'
+      sha256 '2290185f5413a95b73d67894008fcca35e60f5f9110297b358623d41d8237a3e'
     end
   end
 
