@@ -1,27 +1,27 @@
 class TfstateLookup < Formula
   desc 'Lookup resource attributes in tfstate.'
-  version '1.12.0'
+  version '1.12.1'
   homepage 'https://github.com/fujiwara/tfstate-lookup'
 
   on_macos do
     if Hardware::CPU.arm?
-      url 'https://github.com/fujiwara/tfstate-lookup/releases/download/v1.12.0/tfstate-lookup_1.12.0_darwin_arm64.tar.gz'
-      sha256 'f3f8c67d38af0f2a88cf402e995641b919c296a72d967d705bc43604f93afcaa'
+      url 'https://github.com/fujiwara/tfstate-lookup/releases/download/v1.12.1/tfstate-lookup_1.12.1_darwin_arm64.tar.gz'
+      sha256 '786b7e8ad350d59bd9240ecade6085bbd872b288172245495dd0c31cc8bfa689'
     end
     if Hardware::CPU.intel?
-      url 'https://github.com/fujiwara/tfstate-lookup/releases/download/v1.12.0/tfstate-lookup_1.12.0_darwin_amd64.tar.gz'
-      sha256 '6478589da357b9077dff8c65a30daf364816f8d8e84cddcd785587e2bfe2b3ec'
+      url 'https://github.com/fujiwara/tfstate-lookup/releases/download/v1.12.1/tfstate-lookup_1.12.1_darwin_amd64.tar.gz'
+      sha256 '2655ea8c461bc49c4092209999453923c96caa782b39bb46ccc8776d18c94115'
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url 'https://github.com/fujiwara/tfstate-lookup/releases/download/v1.12.0/tfstate-lookup_1.12.0_linux_arm64.tar.gz'
-      sha256 'b05ac3bb5fec8360b4dab12df7a0b05cd6f45e522931b7620cdb39865ef4c00e'
+      url 'https://github.com/fujiwara/tfstate-lookup/releases/download/v1.12.1/tfstate-lookup_1.12.1_linux_arm64.tar.gz'
+      sha256 'f5bb2464e90d4ee9fea2ce91b2c6984b66eda458e0ed6ecbe33f51975b6baf16'
     end
     if Hardware::CPU.intel?
-      url 'https://github.com/fujiwara/tfstate-lookup/releases/download/v1.12.0/tfstate-lookup_1.12.0_linux_amd64.tar.gz'
-      sha256 'f7b824569c5a6f413b797a83113c47e16fe5d9c51d6e0fb386a9db755faf4e1f'
+      url 'https://github.com/fujiwara/tfstate-lookup/releases/download/v1.12.1/tfstate-lookup_1.12.1_linux_amd64.tar.gz'
+      sha256 'c69c10cbe2b075a5a7451c6e093d29403cd67ff034131073ed74a1c74c6e55ad'
     end
   end
 
