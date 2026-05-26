@@ -13,4 +13,4 @@ update-all:
 	done
 
 test/%:
-	HOMEBREW_DEVELOPER=true brew install --build-from-source $*
+	HOMEBREW_DEVELOPER=true HOMEBREW_NO_SANDBOX_LINUX=1 brew install --build-from-source $*
