@@ -21,6 +21,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           HOMEBREW_DEVELOPER: "true"
+          HOMEBREW_NO_SANDBOX_LINUX: "1"
         run: |
           git fetch origin master
           differs=$(git diff origin/master --name-only | grep '\.rb$' || true)
