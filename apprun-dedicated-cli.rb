@@ -1,28 +1,28 @@
 class ApprunDedicatedCli < Formula
   desc 'A deploy tool for Sakura Cloud AppRun Dedicated(共有型).'
-  version '0.1.1'
+  version '0.1.2'
   homepage 'https://github.com/fujiwara/apprun-dedicated-cli'
   license 'MIT'
 
   on_macos do
     if Hardware::CPU.arm?
-      url 'https://github.com/fujiwara/apprun-dedicated-cli/releases/download/v0.1.1/apprun-dedicated-cli_v0.1.1_darwin_arm64.tar.gz'
-      sha256 '13f67bb12bf10cbe29b24b52d44a4120c6a940db57b1966eaf2fb2167fc040ad'
+      url 'https://github.com/fujiwara/apprun-dedicated-cli/releases/download/v0.1.2/apprun-dedicated-cli_v0.1.2_darwin_arm64.tar.gz'
+      sha256 'c954b28eb4b3d65d9b678f6ff85b632440f0b6a6e37aab0e1ca6c19a04544bff'
     end
     if Hardware::CPU.intel?
-      url 'https://github.com/fujiwara/apprun-dedicated-cli/releases/download/v0.1.1/apprun-dedicated-cli_v0.1.1_darwin_amd64.tar.gz'
-      sha256 'f37ac73f9c9bab69b81e9bda4c606d75ba5af80a07525cb9a319eb04747a6090'
+      url 'https://github.com/fujiwara/apprun-dedicated-cli/releases/download/v0.1.2/apprun-dedicated-cli_v0.1.2_darwin_amd64.tar.gz'
+      sha256 '7e7c1c5d0107aa642dccdd09fbc425fd68d8a67f2403ec0d08101c7c450cff0c'
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url 'https://github.com/fujiwara/apprun-dedicated-cli/releases/download/v0.1.1/apprun-dedicated-cli_v0.1.1_linux_arm64.tar.gz'
-      sha256 '054cb1e1befb96fcb8a78c94f72834ed42e313c5d1cf4daa5b6c9c14132b8eee'
+      url 'https://github.com/fujiwara/apprun-dedicated-cli/releases/download/v0.1.2/apprun-dedicated-cli_v0.1.2_linux_arm64.tar.gz'
+      sha256 '27de32e5ec9a77d21b567ece309c5a5aef24cc96c5bee3475c3643431a495d17'
     end
     if Hardware::CPU.intel?
-      url 'https://github.com/fujiwara/apprun-dedicated-cli/releases/download/v0.1.1/apprun-dedicated-cli_v0.1.1_linux_amd64.tar.gz'
-      sha256 'e9d1ea198866d6366c3a0b28ed13310679f311cfce3414f14d38a954b1ac56e8'
+      url 'https://github.com/fujiwara/apprun-dedicated-cli/releases/download/v0.1.2/apprun-dedicated-cli_v0.1.2_linux_amd64.tar.gz'
+      sha256 '4a8a25a574693c73a5c5fcba2909f92ff093dedc5e4eaf2321fa3d44d6305350'
     end
   end
 
