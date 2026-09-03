@@ -1,26 +1,26 @@
 class SakuraSecretsCli < Formula
-  version '0.3.3'
+  version '0.3.4'
   homepage 'https://github.com/fujiwara/sakura-secrets-cli'
 
   on_macos do
     if Hardware::CPU.arm?
-      url 'https://github.com/fujiwara/sakura-secrets-cli/releases/download/v0.3.3/sakura-secrets-cli_v0.3.3_darwin_arm64.tar.gz'
-      sha256 'bb22d9addcdd09c244341767e58d642838f894cb75a199a872a6c196c485fef9'
+      url 'https://github.com/fujiwara/sakura-secrets-cli/releases/download/v0.3.4/sakura-secrets-cli_v0.3.4_darwin_arm64.tar.gz'
+      sha256 '33a414e6a512c53b4fb39723ce6cb3ca915c2279317c7b9714a316d3c4f1a1a1'
     end
     if Hardware::CPU.intel?
-      url 'https://github.com/fujiwara/sakura-secrets-cli/releases/download/v0.3.3/sakura-secrets-cli_v0.3.3_darwin_amd64.tar.gz'
-      sha256 '8643500f59c7c371c36c3530f4f804e6caf84c77f8bc06d921bc55435b7f9779'
+      url 'https://github.com/fujiwara/sakura-secrets-cli/releases/download/v0.3.4/sakura-secrets-cli_v0.3.4_darwin_amd64.tar.gz'
+      sha256 'a3c6eb8f16f92cc40567fc6f2039fc31d393717cec59ff6dc83999d47b2524a8'
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url 'https://github.com/fujiwara/sakura-secrets-cli/releases/download/v0.3.3/sakura-secrets-cli_v0.3.3_linux_arm64.tar.gz'
-      sha256 '609dde01cf305e13997f103d2c95b862e123368c38fa6d6aa130d38a36979662'
+      url 'https://github.com/fujiwara/sakura-secrets-cli/releases/download/v0.3.4/sakura-secrets-cli_v0.3.4_linux_arm64.tar.gz'
+      sha256 '3258194f5944545339385c155b59d8a1196c7a47d391ac64ce43e592fceb5f4f'
     end
     if Hardware::CPU.intel?
-      url 'https://github.com/fujiwara/sakura-secrets-cli/releases/download/v0.3.3/sakura-secrets-cli_v0.3.3_linux_amd64.tar.gz'
-      sha256 '35acbb7b332e98140b5a0a983c06c106a68c4d3f15ad23f01849a41c2b17ef44'
+      url 'https://github.com/fujiwara/sakura-secrets-cli/releases/download/v0.3.4/sakura-secrets-cli_v0.3.4_linux_amd64.tar.gz'
+      sha256 '4fabafe5e97ae21f38c096fe805207bf65e6cba36f3943331881e2d25353d154'
     end
   end
 
