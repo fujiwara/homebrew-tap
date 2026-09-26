@@ -1,26 +1,26 @@
 class SopsSakuraKms < Formula
-  version '0.6.0'
+  version '0.7.0'
   homepage 'https://github.com/fujiwara/sops-sakura-kms'
 
   on_macos do
     if Hardware::CPU.arm?
-      url 'https://github.com/fujiwara/sops-sakura-kms/releases/download/v0.6.0/sops-sakura-kms_v0.6.0_darwin_arm64.tar.gz'
-      sha256 'e81826050e182e5fd514e1744480644d56e3fd46b368f444cd911c4785dcef61'
+      url 'https://github.com/fujiwara/sops-sakura-kms/releases/download/v0.7.0/sops-sakura-kms_v0.7.0_darwin_arm64.tar.gz'
+      sha256 'cc47b2602392e338e18d1ec9c7c528ec7b0929e0cd567852755d95ad66fc655d'
     end
     if Hardware::CPU.intel?
-      url 'https://github.com/fujiwara/sops-sakura-kms/releases/download/v0.6.0/sops-sakura-kms_v0.6.0_darwin_amd64.tar.gz'
-      sha256 '91ca434b7a5b9ecee18311e700ae877e3a113329a7c40d49f04124cf225c1ca1'
+      url 'https://github.com/fujiwara/sops-sakura-kms/releases/download/v0.7.0/sops-sakura-kms_v0.7.0_darwin_amd64.tar.gz'
+      sha256 '0cec4ad143be58f1a15ff491d4a1c005490847ab4f0166939f6526f16b7a1edd'
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url 'https://github.com/fujiwara/sops-sakura-kms/releases/download/v0.6.0/sops-sakura-kms_v0.6.0_linux_arm64.tar.gz'
-      sha256 '552370e6a468330390d31efd4ad495e73335b0ed261ba713fc12838862a72b71'
+      url 'https://github.com/fujiwara/sops-sakura-kms/releases/download/v0.7.0/sops-sakura-kms_v0.7.0_linux_arm64.tar.gz'
+      sha256 'c6150ad7678dad114fc5d8022a67a53d98772f325a03465814a4f05f172f5370'
     end
     if Hardware::CPU.intel?
-      url 'https://github.com/fujiwara/sops-sakura-kms/releases/download/v0.6.0/sops-sakura-kms_v0.6.0_linux_amd64.tar.gz'
-      sha256 '226fd98af6b1f9b4ac285eb334c3083d06931e66dc158b3d204aa1a894514ae2'
+      url 'https://github.com/fujiwara/sops-sakura-kms/releases/download/v0.7.0/sops-sakura-kms_v0.7.0_linux_amd64.tar.gz'
+      sha256 'fe6587ec807b957e4df200ef7d564f1a0c21e0d42aa1ca380840e4080f86f968'
     end
   end
 
