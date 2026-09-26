@@ -22,7 +22,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           HOMEBREW_DEVELOPER: "true"
-          HOMEBREW_NO_SANDBOX_LINUX: "1"
         run: |
           failed=""
           for file in *.rb; do
